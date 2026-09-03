@@ -1,0 +1,2032 @@
+{
+  "ok": true,
+  "mode": "webmcp",
+  "appUrl": "https://stantheman0128.github.io/cuemend-webmcp/?build=2b7534a",
+  "testedAt": "2026-09-03T22:04:01.696Z",
+  "target": {
+    "title": "",
+    "url": "https://stantheman0128.github.io/cuemend-webmcp/?build=2b7534a"
+  },
+  "browser": {
+    "product": "Chrome/151.0.7922.175",
+    "protocolVersion": "1.3",
+    "jsVersion": "15.1.206.23",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36"
+  },
+  "loaded": {
+    "title": "CueMend — Repair the timing. Keep the beat.",
+    "revision": 1,
+    "phase": "baseline",
+    "conflicts": 7,
+    "protectedBeats": 2,
+    "proposalStatus": "None",
+    "runtime": "Checking WebMCP…",
+    "track": "ACTIVE TRACK",
+    "action": "Audit the active track",
+    "tools": [],
+    "activity": []
+  },
+  "diagnostics": {
+    "runtimeExceptions": [],
+    "consoleErrors": [],
+    "browserLogErrors": []
+  },
+  "evidence": {
+    "browserApi": "Chrome DevTools Protocol WebMCP domain",
+    "frameId": "0DB5E8661B92E5E3B05F273263D31699",
+    "completedRuns": 3,
+    "runs": [
+      {
+        "runNumber": 1,
+        "started": {
+          "title": "CueMend — Repair the timing. Keep the beat.",
+          "revision": 1,
+          "phase": "baseline",
+          "conflicts": 7,
+          "protectedBeats": 2,
+          "proposalStatus": "None",
+          "runtime": "WebMCP ready · 3 tools",
+          "track": "ACTIVE TRACK",
+          "action": "Audit the active track",
+          "tools": [
+            "get_rehearsal",
+            "audit_captions",
+            "stage_timing_plan"
+          ],
+          "activity": [
+            {
+              "actor": "SYSTEM",
+              "action": "Loaded deterministic rehearsal fixture",
+              "detail": "Revision 1 · 10 cues · 2 protected beats"
+            }
+          ]
+        },
+        "inventories": {
+          "base": [
+            "cuemend_audit_captions",
+            "cuemend_get_rehearsal",
+            "cuemend_stage_timing_plan"
+          ],
+          "staged": [
+            "cuemend_audit_captions",
+            "cuemend_discard_timing_plan",
+            "cuemend_get_rehearsal",
+            "cuemend_preview_timing_plan",
+            "cuemend_stage_timing_plan"
+          ],
+          "stale": [
+            "cuemend_audit_captions",
+            "cuemend_discard_timing_plan",
+            "cuemend_get_rehearsal",
+            "cuemend_stage_timing_plan"
+          ],
+          "approved": [
+            "cuemend_audit_captions",
+            "cuemend_commit_approved_plan",
+            "cuemend_discard_timing_plan",
+            "cuemend_get_rehearsal",
+            "cuemend_preview_timing_plan",
+            "cuemend_stage_timing_plan"
+          ],
+          "committed": [
+            "cuemend_audit_captions",
+            "cuemend_get_rehearsal",
+            "cuemend_verify_and_export"
+          ]
+        },
+        "calls": [
+          {
+            "toolName": "cuemend_get_rehearsal",
+            "invocationId": "54A7107D60038160857B6D9069F54D77",
+            "status": "Completed",
+            "summary": {
+              "ok": true,
+              "phase": "baseline",
+              "workspaceRevision": 1,
+              "issueCount": 7
+            }
+          },
+          {
+            "toolName": "cuemend_audit_captions",
+            "invocationId": "709B13E15C5C47F3409260ACFAE6AD47",
+            "status": "Completed",
+            "summary": {
+              "ok": true,
+              "workspaceRevision": 1,
+              "issueCount": 7
+            }
+          },
+          {
+            "toolName": "cuemend_stage_timing_plan",
+            "invocationId": "F63D3A0ED349C9DF74477A60DF76BA67",
+            "status": "Completed",
+            "summary": {
+              "ok": true,
+              "workspaceRevision": 1,
+              "proposalId": "proposal-04e37b27f969",
+              "planIds": [
+                "plan-1",
+                "plan-2",
+                "plan-3"
+              ],
+              "evaluatedCount": 6561,
+              "feasibleCount": 384
+            }
+          },
+          {
+            "toolName": "cuemend_preview_timing_plan",
+            "invocationId": "C0E14E07ABF9DFCE592BE7F010288745",
+            "status": "Completed",
+            "summary": {
+              "ok": true,
+              "workspaceRevision": 1,
+              "proposalId": "proposal-04e37b27f969",
+              "optionalBeatWarnings": [
+                {
+                  "beatId": "beat-breath",
+                  "cueId": "cue-08"
+                }
+              ]
+            }
+          },
+          {
+            "toolName": "cuemend_stage_timing_plan",
+            "invocationId": "85F672F4876DBBBC31791EDA9D921EAC",
+            "status": "Completed",
+            "summary": {
+              "ok": false,
+              "error": {
+                "code": "STALE_REVISION",
+                "message": "Proposal expected revision 1, but the workspace is revision 2.",
+                "nextAction": "Call cuemend_get_rehearsal, re-audit, and stage a new timing plan."
+              }
+            }
+          },
+          {
+            "toolName": "cuemend_get_rehearsal",
+            "invocationId": "94FF9D1DB18DD6CD080A481CD117F00F",
+            "status": "Completed",
+            "summary": {
+              "ok": true,
+              "phase": "stale",
+              "workspaceRevision": 2,
+              "issueCount": 8,
+              "proposalId": "proposal-04e37b27f969",
+              "planIds": [
+                "plan-1",
+                "plan-2",
+                "plan-3"
+              ],
+              "evaluatedCount": 6561,
+              "feasibleCount": 384
+            }
+          },
+          {
+            "toolName": "cuemend_stage_timing_plan",
+            "invocationId": "4AE966D8CCF44E5898B5D769178D49EF",
+            "status": "Completed",
+            "summary": {
+              "ok": true,
+              "workspaceRevision": 2,
+              "proposalId": "proposal-ac2c208bad41",
+              "planIds": [
+                "plan-1",
+                "plan-2",
+                "plan-3"
+              ],
+              "evaluatedCount": 6561,
+              "feasibleCount": 256
+            }
+          },
+          {
+            "toolName": "cuemend_preview_timing_plan",
+            "invocationId": "7B796B74819D015328D9DA2722C9A757",
+            "status": "Completed",
+            "summary": {
+              "ok": true,
+              "workspaceRevision": 2,
+              "proposalId": "proposal-ac2c208bad41",
+              "optionalBeatWarnings": []
+            }
+          },
+          {
+            "toolName": "cuemend_commit_approved_plan",
+            "invocationId": "3A40F4CCF5855C38B3494635FC072F73",
+            "status": "Completed",
+            "summary": {
+              "ok": true,
+              "receipt": {
+                "id": "receipt-6ca99f18ab78",
+                "requestId": "native-run-001",
+                "priorRevision": 2,
+                "workspaceRevision": 3,
+                "beforeIssueCount": 8,
+                "afterIssueCount": 0,
+                "trackDigest": "6ca99f18ab7882e322efe074983df3f43ed6b2ea082fbf233a893444f023b837"
+              }
+            }
+          },
+          {
+            "toolName": "cuemend_verify_and_export",
+            "invocationId": "1F95EE2324D8FF5A3DBE0C934639E6B2",
+            "status": "Completed",
+            "summary": {
+              "ok": true,
+              "workspaceRevision": 3,
+              "issueCount": 0,
+              "vttDigest": "958e9cc9968e053ec18e076a3818fc063d489fbd80899f3fcc9e878d9efe396a",
+              "certificateDigest": "761df48f128cde874b1f268939db1ef6ed95da5708ab9fa88a2833211ae0b202",
+              "limitations": [
+                "Evaluated only against the named CueMend demo production profile.",
+                "Does not certify accessibility, broadcast, venue, legal, or artistic quality.",
+                "Dialogue and rehearsal data are fictional and rights-safe."
+              ]
+            }
+          }
+        ],
+        "staleUi": {
+          "title": "CueMend — Repair the timing. Keep the beat.",
+          "revision": 2,
+          "phase": "stale",
+          "conflicts": 8,
+          "protectedBeats": 3,
+          "proposalStatus": "Stale",
+          "runtime": "WebMCP ready · 5 tools",
+          "track": "ACTIVE TRACK",
+          "action": "The human changed the brief",
+          "tools": [
+            "get_rehearsal",
+            "audit_captions",
+            "stage_timing_plan",
+            "preview_timing_plan",
+            "discard_timing_plan"
+          ],
+          "activity": [
+            {
+              "actor": "SYSTEM",
+              "action": "Loaded deterministic rehearsal fixture",
+              "detail": "Revision 1 · 10 cues · 2 protected beats"
+            },
+            {
+              "actor": "AGENT",
+              "action": "Inspected rehearsal state",
+              "detail": "Revision 1"
+            },
+            {
+              "actor": "AGENT",
+              "action": "Audited active caption track",
+              "detail": "7 conflicts found"
+            },
+            {
+              "actor": "AGENT",
+              "action": "Staged bounded timing search",
+              "detail": "6,561 evaluated · 384 feasible · revision 1"
+            },
+            {
+              "actor": "AGENT",
+              "action": "Previewed timing plan",
+              "detail": "Lower-left projection balance · 7 cue changes · 0 conflicts"
+            },
+            {
+              "actor": "HUMAN",
+              "action": "Protected artistic beat",
+              "detail": "Jon's final breath · revision 2"
+            }
+          ]
+        },
+        "approvedUi": {
+          "title": "CueMend — Repair the timing. Keep the beat.",
+          "revision": 2,
+          "phase": "approved",
+          "conflicts": 8,
+          "protectedBeats": 3,
+          "proposalStatus": "Human approved",
+          "runtime": "WebMCP ready · 5 tools",
+          "track": "STAGED · PROTECT JON'S FINAL BREATH",
+          "action": "Approval is exact and live",
+          "tools": [
+            "get_rehearsal",
+            "audit_captions",
+            "stage_timing_plan",
+            "preview_timing_plan",
+            "discard_timing_plan"
+          ],
+          "activity": [
+            {
+              "actor": "HUMAN",
+              "action": "Protected artistic beat",
+              "detail": "Jon's final breath · revision 2"
+            },
+            {
+              "actor": "AGENT",
+              "action": "Inspected rehearsal state",
+              "detail": "Revision 2"
+            },
+            {
+              "actor": "AGENT",
+              "action": "Staged bounded timing search",
+              "detail": "6,561 evaluated · 256 feasible · revision 2"
+            },
+            {
+              "actor": "AGENT",
+              "action": "Previewed timing plan",
+              "detail": "Protect Jon's final breath · 8 cue changes · 0 conflicts"
+            },
+            {
+              "actor": "HUMAN",
+              "action": "Selected artistic alternative",
+              "detail": "Protect Jon's final breath · plan-1"
+            },
+            {
+              "actor": "HUMAN",
+              "action": "Approved exact timing plan",
+              "detail": "Protect Jon's final breath · approval e2355b749923"
+            }
+          ]
+        },
+        "committedUi": {
+          "title": "CueMend — Repair the timing. Keep the beat.",
+          "revision": 3,
+          "phase": "committed",
+          "conflicts": 0,
+          "protectedBeats": 3,
+          "proposalStatus": "Committed proof",
+          "runtime": "WebMCP ready · 6 tools",
+          "track": "ACTIVE TRACK",
+          "action": "Verify the committed artifact",
+          "tools": [
+            "get_rehearsal",
+            "audit_captions",
+            "stage_timing_plan",
+            "preview_timing_plan",
+            "discard_timing_plan",
+            "commit_approved_plan"
+          ],
+          "activity": [
+            {
+              "actor": "AGENT",
+              "action": "Inspected rehearsal state",
+              "detail": "Revision 2"
+            },
+            {
+              "actor": "AGENT",
+              "action": "Staged bounded timing search",
+              "detail": "6,561 evaluated · 256 feasible · revision 2"
+            },
+            {
+              "actor": "AGENT",
+              "action": "Previewed timing plan",
+              "detail": "Protect Jon's final breath · 8 cue changes · 0 conflicts"
+            },
+            {
+              "actor": "HUMAN",
+              "action": "Selected artistic alternative",
+              "detail": "Protect Jon's final breath · plan-1"
+            },
+            {
+              "actor": "HUMAN",
+              "action": "Approved exact timing plan",
+              "detail": "Protect Jon's final breath · approval e2355b749923"
+            },
+            {
+              "actor": "AGENT",
+              "action": "Committed approved caption plan",
+              "detail": "8 → 0 conflicts · revision 3"
+            }
+          ]
+        },
+        "finished": {
+          "title": "CueMend — Repair the timing. Keep the beat.",
+          "revision": 3,
+          "phase": "committed",
+          "conflicts": 0,
+          "protectedBeats": 3,
+          "proposalStatus": "Committed proof",
+          "runtime": "WebMCP ready · 3 tools",
+          "track": "ACTIVE TRACK",
+          "action": "Verified, portable, still editable",
+          "tools": [
+            "get_rehearsal",
+            "audit_captions",
+            "verify_and_export"
+          ],
+          "activity": [
+            {
+              "actor": "AGENT",
+              "action": "Staged bounded timing search",
+              "detail": "6,561 evaluated · 256 feasible · revision 2"
+            },
+            {
+              "actor": "AGENT",
+              "action": "Previewed timing plan",
+              "detail": "Protect Jon's final breath · 8 cue changes · 0 conflicts"
+            },
+            {
+              "actor": "HUMAN",
+              "action": "Selected artistic alternative",
+              "detail": "Protect Jon's final breath · plan-1"
+            },
+            {
+              "actor": "HUMAN",
+              "action": "Approved exact timing plan",
+              "detail": "Protect Jon's final breath · approval e2355b749923"
+            },
+            {
+              "actor": "AGENT",
+              "action": "Committed approved caption plan",
+              "detail": "8 → 0 conflicts · revision 3"
+            },
+            {
+              "actor": "AGENT",
+              "action": "Verified and exported WebVTT",
+              "detail": "0 conflicts · VTT 958e9cc9968e · certificate 761df48f128c"
+            }
+          ]
+        }
+      },
+      {
+        "runNumber": 2,
+        "started": {
+          "title": "CueMend — Repair the timing. Keep the beat.",
+          "revision": 1,
+          "phase": "baseline",
+          "conflicts": 7,
+          "protectedBeats": 2,
+          "proposalStatus": "None",
+          "runtime": "WebMCP ready · 3 tools",
+          "track": "ACTIVE TRACK",
+          "action": "Audit the active track",
+          "tools": [
+            "get_rehearsal",
+            "audit_captions",
+            "stage_timing_plan"
+          ],
+          "activity": [
+            {
+              "actor": "SYSTEM",
+              "action": "Loaded deterministic rehearsal fixture",
+              "detail": "Revision 1 · 10 cues · 2 protected beats"
+            },
+            {
+              "actor": "HUMAN",
+              "action": "Reset rehearsal fixture",
+              "detail": "Returned to deterministic revision 1"
+            }
+          ]
+        },
+        "inventories": {
+          "base": [
+            "cuemend_audit_captions",
+            "cuemend_get_rehearsal",
+            "cuemend_stage_timing_plan"
+          ],
+          "staged": [
+            "cuemend_audit_captions",
+            "cuemend_discard_timing_plan",
+            "cuemend_get_rehearsal",
+            "cuemend_preview_timing_plan",
+            "cuemend_stage_timing_plan"
+          ],
+          "stale": [
+            "cuemend_audit_captions",
+            "cuemend_discard_timing_plan",
+            "cuemend_get_rehearsal",
+            "cuemend_stage_timing_plan"
+          ],
+          "approved": [
+            "cuemend_audit_captions",
+            "cuemend_commit_approved_plan",
+            "cuemend_discard_timing_plan",
+            "cuemend_get_rehearsal",
+            "cuemend_preview_timing_plan",
+            "cuemend_stage_timing_plan"
+          ],
+          "committed": [
+            "cuemend_audit_captions",
+            "cuemend_get_rehearsal",
+            "cuemend_verify_and_export"
+          ]
+        },
+        "calls": [
+          {
+            "toolName": "cuemend_get_rehearsal",
+            "invocationId": "7AD343CE6DC976284968093F8D0749D4",
+            "status": "Completed",
+            "summary": {
+              "ok": true,
+              "phase": "baseline",
+              "workspaceRevision": 1,
+              "issueCount": 7
+            }
+          },
+          {
+            "toolName": "cuemend_audit_captions",
+            "invocationId": "0D920FDCAB2B0A68B7F1654BD131340E",
+            "status": "Completed",
+            "summary": {
+              "ok": true,
+              "workspaceRevision": 1,
+              "issueCount": 7
+            }
+          },
+          {
+            "toolName": "cuemend_stage_timing_plan",
+            "invocationId": "99CC53079FE7F1835A5B1EA43FBC3452",
+            "status": "Completed",
+            "summary": {
+              "ok": true,
+              "workspaceRevision": 1,
+              "proposalId": "proposal-04e37b27f969",
+              "planIds": [
+                "plan-1",
+                "plan-2",
+                "plan-3"
+              ],
+              "evaluatedCount": 6561,
+              "feasibleCount": 384
+            }
+          },
+          {
+            "toolName": "cuemend_preview_timing_plan",
+            "invocationId": "E52668CF03653995756EA09D5D924CF5",
+            "status": "Completed",
+            "summary": {
+              "ok": true,
+              "workspaceRevision": 1,
+              "proposalId": "proposal-04e37b27f969",
+              "optionalBeatWarnings": [
+                {
+                  "beatId": "beat-breath",
+                  "cueId": "cue-08"
+                }
+              ]
+            }
+          },
+          {
+            "toolName": "cuemend_stage_timing_plan",
+            "invocationId": "C6095160494868684617ED8DFA95666C",
+            "status": "Completed",
+            "summary": {
+              "ok": false,
+              "error": {
+                "code": "STALE_REVISION",
+                "message": "Proposal expected revision 1, but the workspace is revision 2.",
+                "nextAction": "Call cuemend_get_rehearsal, re-audit, and stage a new timing plan."
+              }
+            }
+          },
+          {
+            "toolName": "cuemend_get_rehearsal",
+            "invocationId": "237D0E10FB63580369BFBB34848608F8",
+            "status": "Completed",
+            "summary": {
+              "ok": true,
+              "phase": "stale",
+              "workspaceRevision": 2,
+              "issueCount": 8,
+              "proposalId": "proposal-04e37b27f969",
+              "planIds": [
+                "plan-1",
+                "plan-2",
+                "plan-3"
+              ],
+              "evaluatedCount": 6561,
+              "feasibleCount": 384
+            }
+          },
+          {
+            "toolName": "cuemend_stage_timing_plan",
+            "invocationId": "1E28C58BB5E9F705369D4F87F74C604C",
+            "status": "Completed",
+            "summary": {
+              "ok": true,
+              "workspaceRevision": 2,
+              "proposalId": "proposal-ac2c208bad41",
+              "planIds": [
+                "plan-1",
+                "plan-2",
+                "plan-3"
+              ],
+              "evaluatedCount": 6561,
+              "feasibleCount": 256
+            }
+          },
+          {
+            "toolName": "cuemend_preview_timing_plan",
+            "invocationId": "3B05B925693927F1B94899D5776A694F",
+            "status": "Completed",
+            "summary": {
+              "ok": true,
+              "workspaceRevision": 2,
+              "proposalId": "proposal-ac2c208bad41",
+              "optionalBeatWarnings": []
+            }
+          },
+          {
+            "toolName": "cuemend_commit_approved_plan",
+            "invocationId": "E61C160C164AACDFA54D10346D6CE2C2",
+            "status": "Completed",
+            "summary": {
+              "ok": true,
+              "receipt": {
+                "id": "receipt-6ca99f18ab78",
+                "requestId": "native-run-002",
+                "priorRevision": 2,
+                "workspaceRevision": 3,
+                "beforeIssueCount": 8,
+                "afterIssueCount": 0,
+                "trackDigest": "6ca99f18ab7882e322efe074983df3f43ed6b2ea082fbf233a893444f023b837"
+              }
+            }
+          },
+          {
+            "toolName": "cuemend_verify_and_export",
+            "invocationId": "3A337CA01CCE913AAF109B566CB7F876",
+            "status": "Completed",
+            "summary": {
+              "ok": true,
+              "workspaceRevision": 3,
+              "issueCount": 0,
+              "vttDigest": "958e9cc9968e053ec18e076a3818fc063d489fbd80899f3fcc9e878d9efe396a",
+              "certificateDigest": "761df48f128cde874b1f268939db1ef6ed95da5708ab9fa88a2833211ae0b202",
+              "limitations": [
+                "Evaluated only against the named CueMend demo production profile.",
+                "Does not certify accessibility, broadcast, venue, legal, or artistic quality.",
+                "Dialogue and rehearsal data are fictional and rights-safe."
+              ]
+            }
+          }
+        ],
+        "staleUi": {
+          "title": "CueMend — Repair the timing. Keep the beat.",
+          "revision": 2,
+          "phase": "stale",
+          "conflicts": 8,
+          "protectedBeats": 3,
+          "proposalStatus": "Stale",
+          "runtime": "WebMCP ready · 4 tools",
+          "track": "ACTIVE TRACK",
+          "action": "The human changed the brief",
+          "tools": [
+            "get_rehearsal",
+            "audit_captions",
+            "stage_timing_plan",
+            "discard_timing_plan"
+          ],
+          "activity": [
+            {
+              "actor": "HUMAN",
+              "action": "Reset rehearsal fixture",
+              "detail": "Returned to deterministic revision 1"
+            },
+            {
+              "actor": "AGENT",
+              "action": "Inspected rehearsal state",
+              "detail": "Revision 1"
+            },
+            {
+              "actor": "AGENT",
+              "action": "Audited active caption track",
+              "detail": "7 conflicts found"
+            },
+            {
+              "actor": "AGENT",
+              "action": "Staged bounded timing search",
+              "detail": "6,561 evaluated · 384 feasible · revision 1"
+            },
+            {
+              "actor": "AGENT",
+              "action": "Previewed timing plan",
+              "detail": "Lower-left projection balance · 7 cue changes · 0 conflicts"
+            },
+            {
+              "actor": "HUMAN",
+              "action": "Protected artistic beat",
+              "detail": "Jon's final breath · revision 2"
+            }
+          ]
+        },
+        "approvedUi": {
+          "title": "CueMend — Repair the timing. Keep the beat.",
+          "revision": 2,
+          "phase": "approved",
+          "conflicts": 8,
+          "protectedBeats": 3,
+          "proposalStatus": "Human approved",
+          "runtime": "WebMCP ready · 6 tools",
+          "track": "STAGED · PROTECT JON'S FINAL BREATH",
+          "action": "Approval is exact and live",
+          "tools": [
+            "get_rehearsal",
+            "audit_captions",
+            "stage_timing_plan",
+            "preview_timing_plan",
+            "discard_timing_plan",
+            "commit_approved_plan"
+          ],
+          "activity": [
+            {
+              "actor": "HUMAN",
+              "action": "Protected artistic beat",
+              "detail": "Jon's final breath · revision 2"
+            },
+            {
+              "actor": "AGENT",
+              "action": "Inspected rehearsal state",
+              "detail": "Revision 2"
+            },
+            {
+              "actor": "AGENT",
+              "action": "Staged bounded timing search",
+              "detail": "6,561 evaluated · 256 feasible · revision 2"
+            },
+            {
+              "actor": "AGENT",
+              "action": "Previewed timing plan",
+              "detail": "Protect Jon's final breath · 8 cue changes · 0 conflicts"
+            },
+            {
+              "actor": "HUMAN",
+              "action": "Selected artistic alternative",
+              "detail": "Protect Jon's final breath · plan-1"
+            },
+            {
+              "actor": "HUMAN",
+              "action": "Approved exact timing plan",
+              "detail": "Protect Jon's final breath · approval e2355b749923"
+            }
+          ]
+        },
+        "committedUi": {
+          "title": "CueMend — Repair the timing. Keep the beat.",
+          "revision": 3,
+          "phase": "committed",
+          "conflicts": 0,
+          "protectedBeats": 3,
+          "proposalStatus": "Committed proof",
+          "runtime": "WebMCP ready · 6 tools",
+          "track": "ACTIVE TRACK",
+          "action": "Verify the committed artifact",
+          "tools": [
+            "get_rehearsal",
+            "audit_captions",
+            "stage_timing_plan",
+            "preview_timing_plan",
+            "discard_timing_plan",
+            "commit_approved_plan"
+          ],
+          "activity": [
+            {
+              "actor": "AGENT",
+              "action": "Inspected rehearsal state",
+              "detail": "Revision 2"
+            },
+            {
+              "actor": "AGENT",
+              "action": "Staged bounded timing search",
+              "detail": "6,561 evaluated · 256 feasible · revision 2"
+            },
+            {
+              "actor": "AGENT",
+              "action": "Previewed timing plan",
+              "detail": "Protect Jon's final breath · 8 cue changes · 0 conflicts"
+            },
+            {
+              "actor": "HUMAN",
+              "action": "Selected artistic alternative",
+              "detail": "Protect Jon's final breath · plan-1"
+            },
+            {
+              "actor": "HUMAN",
+              "action": "Approved exact timing plan",
+              "detail": "Protect Jon's final breath · approval e2355b749923"
+            },
+            {
+              "actor": "AGENT",
+              "action": "Committed approved caption plan",
+              "detail": "8 → 0 conflicts · revision 3"
+            }
+          ]
+        },
+        "finished": {
+          "title": "CueMend — Repair the timing. Keep the beat.",
+          "revision": 3,
+          "phase": "committed",
+          "conflicts": 0,
+          "protectedBeats": 3,
+          "proposalStatus": "Committed proof",
+          "runtime": "WebMCP ready · 3 tools",
+          "track": "ACTIVE TRACK",
+          "action": "Verified, portable, still editable",
+          "tools": [
+            "get_rehearsal",
+            "audit_captions",
+            "verify_and_export"
+          ],
+          "activity": [
+            {
+              "actor": "AGENT",
+              "action": "Staged bounded timing search",
+              "detail": "6,561 evaluated · 256 feasible · revision 2"
+            },
+            {
+              "actor": "AGENT",
+              "action": "Previewed timing plan",
+              "detail": "Protect Jon's final breath · 8 cue changes · 0 conflicts"
+            },
+            {
+              "actor": "HUMAN",
+              "action": "Selected artistic alternative",
+              "detail": "Protect Jon's final breath · plan-1"
+            },
+            {
+              "actor": "HUMAN",
+              "action": "Approved exact timing plan",
+              "detail": "Protect Jon's final breath · approval e2355b749923"
+            },
+            {
+              "actor": "AGENT",
+              "action": "Committed approved caption plan",
+              "detail": "8 → 0 conflicts · revision 3"
+            },
+            {
+              "actor": "AGENT",
+              "action": "Verified and exported WebVTT",
+              "detail": "0 conflicts · VTT 958e9cc9968e · certificate 761df48f128c"
+            }
+          ]
+        }
+      },
+      {
+        "runNumber": 3,
+        "started": {
+          "title": "CueMend — Repair the timing. Keep the beat.",
+          "revision": 1,
+          "phase": "baseline",
+          "conflicts": 7,
+          "protectedBeats": 2,
+          "proposalStatus": "None",
+          "runtime": "WebMCP ready · 3 tools",
+          "track": "ACTIVE TRACK",
+          "action": "Audit the active track",
+          "tools": [
+            "get_rehearsal",
+            "audit_captions",
+            "stage_timing_plan"
+          ],
+          "activity": [
+            {
+              "actor": "SYSTEM",
+              "action": "Loaded deterministic rehearsal fixture",
+              "detail": "Revision 1 · 10 cues · 2 protected beats"
+            },
+            {
+              "actor": "HUMAN",
+              "action": "Reset rehearsal fixture",
+              "detail": "Returned to deterministic revision 1"
+            }
+          ]
+        },
+        "inventories": {
+          "base": [
+            "cuemend_audit_captions",
+            "cuemend_get_rehearsal",
+            "cuemend_stage_timing_plan"
+          ],
+          "staged": [
+            "cuemend_audit_captions",
+            "cuemend_discard_timing_plan",
+            "cuemend_get_rehearsal",
+            "cuemend_preview_timing_plan",
+            "cuemend_stage_timing_plan"
+          ],
+          "stale": [
+            "cuemend_audit_captions",
+            "cuemend_discard_timing_plan",
+            "cuemend_get_rehearsal",
+            "cuemend_stage_timing_plan"
+          ],
+          "approved": [
+            "cuemend_audit_captions",
+            "cuemend_commit_approved_plan",
+            "cuemend_discard_timing_plan",
+            "cuemend_get_rehearsal",
+            "cuemend_preview_timing_plan",
+            "cuemend_stage_timing_plan"
+          ],
+          "committed": [
+            "cuemend_audit_captions",
+            "cuemend_get_rehearsal",
+            "cuemend_verify_and_export"
+          ]
+        },
+        "calls": [
+          {
+            "toolName": "cuemend_get_rehearsal",
+            "invocationId": "19AAE4745AC7468E91B0357F5C64745B",
+            "status": "Completed",
+            "summary": {
+              "ok": true,
+              "phase": "baseline",
+              "workspaceRevision": 1,
+              "issueCount": 7
+            }
+          },
+          {
+            "toolName": "cuemend_audit_captions",
+            "invocationId": "976B09D4F7B451AEC29826F15B26089A",
+            "status": "Completed",
+            "summary": {
+              "ok": true,
+              "workspaceRevision": 1,
+              "issueCount": 7
+            }
+          },
+          {
+            "toolName": "cuemend_stage_timing_plan",
+            "invocationId": "AFEC6C43ED26B89F013612B68137B36C",
+            "status": "Completed",
+            "summary": {
+              "ok": true,
+              "workspaceRevision": 1,
+              "proposalId": "proposal-04e37b27f969",
+              "planIds": [
+                "plan-1",
+                "plan-2",
+                "plan-3"
+              ],
+              "evaluatedCount": 6561,
+              "feasibleCount": 384
+            }
+          },
+          {
+            "toolName": "cuemend_preview_timing_plan",
+            "invocationId": "1FBB7584927D459B07F1BB8793F0E570",
+            "status": "Completed",
+            "summary": {
+              "ok": true,
+              "workspaceRevision": 1,
+              "proposalId": "proposal-04e37b27f969",
+              "optionalBeatWarnings": [
+                {
+                  "beatId": "beat-breath",
+                  "cueId": "cue-08"
+                }
+              ]
+            }
+          },
+          {
+            "toolName": "cuemend_stage_timing_plan",
+            "invocationId": "287D832265B3325FBC6D63C40904EB6B",
+            "status": "Completed",
+            "summary": {
+              "ok": false,
+              "error": {
+                "code": "STALE_REVISION",
+                "message": "Proposal expected revision 1, but the workspace is revision 2.",
+                "nextAction": "Call cuemend_get_rehearsal, re-audit, and stage a new timing plan."
+              }
+            }
+          },
+          {
+            "toolName": "cuemend_get_rehearsal",
+            "invocationId": "39E3F74CC81FBEEF8F9FA982801FB840",
+            "status": "Completed",
+            "summary": {
+              "ok": true,
+              "phase": "stale",
+              "workspaceRevision": 2,
+              "issueCount": 8,
+              "proposalId": "proposal-04e37b27f969",
+              "planIds": [
+                "plan-1",
+                "plan-2",
+                "plan-3"
+              ],
+              "evaluatedCount": 6561,
+              "feasibleCount": 384
+            }
+          },
+          {
+            "toolName": "cuemend_stage_timing_plan",
+            "invocationId": "746056D01BA9A47C70089FB9D234CE2C",
+            "status": "Completed",
+            "summary": {
+              "ok": true,
+              "workspaceRevision": 2,
+              "proposalId": "proposal-ac2c208bad41",
+              "planIds": [
+                "plan-1",
+                "plan-2",
+                "plan-3"
+              ],
+              "evaluatedCount": 6561,
+              "feasibleCount": 256
+            }
+          },
+          {
+            "toolName": "cuemend_preview_timing_plan",
+            "invocationId": "15725EAF6603F37121D4AD58AB5EF639",
+            "status": "Completed",
+            "summary": {
+              "ok": true,
+              "workspaceRevision": 2,
+              "proposalId": "proposal-ac2c208bad41",
+              "optionalBeatWarnings": []
+            }
+          },
+          {
+            "toolName": "cuemend_commit_approved_plan",
+            "invocationId": "96DB316FE69251DA5A3038FC4F4C1529",
+            "status": "Completed",
+            "summary": {
+              "ok": true,
+              "receipt": {
+                "id": "receipt-6ca99f18ab78",
+                "requestId": "native-run-003",
+                "priorRevision": 2,
+                "workspaceRevision": 3,
+                "beforeIssueCount": 8,
+                "afterIssueCount": 0,
+                "trackDigest": "6ca99f18ab7882e322efe074983df3f43ed6b2ea082fbf233a893444f023b837"
+              }
+            }
+          },
+          {
+            "toolName": "cuemend_verify_and_export",
+            "invocationId": "8D53C2BEC563CDE8721ACD0150CD7A7D",
+            "status": "Completed",
+            "summary": {
+              "ok": true,
+              "workspaceRevision": 3,
+              "issueCount": 0,
+              "vttDigest": "958e9cc9968e053ec18e076a3818fc063d489fbd80899f3fcc9e878d9efe396a",
+              "certificateDigest": "761df48f128cde874b1f268939db1ef6ed95da5708ab9fa88a2833211ae0b202",
+              "limitations": [
+                "Evaluated only against the named CueMend demo production profile.",
+                "Does not certify accessibility, broadcast, venue, legal, or artistic quality.",
+                "Dialogue and rehearsal data are fictional and rights-safe."
+              ]
+            }
+          }
+        ],
+        "staleUi": {
+          "title": "CueMend — Repair the timing. Keep the beat.",
+          "revision": 2,
+          "phase": "stale",
+          "conflicts": 8,
+          "protectedBeats": 3,
+          "proposalStatus": "Stale",
+          "runtime": "WebMCP ready · 4 tools",
+          "track": "ACTIVE TRACK",
+          "action": "The human changed the brief",
+          "tools": [
+            "get_rehearsal",
+            "audit_captions",
+            "stage_timing_plan",
+            "discard_timing_plan"
+          ],
+          "activity": [
+            {
+              "actor": "HUMAN",
+              "action": "Reset rehearsal fixture",
+              "detail": "Returned to deterministic revision 1"
+            },
+            {
+              "actor": "AGENT",
+              "action": "Inspected rehearsal state",
+              "detail": "Revision 1"
+            },
+            {
+              "actor": "AGENT",
+              "action": "Audited active caption track",
+              "detail": "7 conflicts found"
+            },
+            {
+              "actor": "AGENT",
+              "action": "Staged bounded timing search",
+              "detail": "6,561 evaluated · 384 feasible · revision 1"
+            },
+            {
+              "actor": "AGENT",
+              "action": "Previewed timing plan",
+              "detail": "Lower-left projection balance · 7 cue changes · 0 conflicts"
+            },
+            {
+              "actor": "HUMAN",
+              "action": "Protected artistic beat",
+              "detail": "Jon's final breath · revision 2"
+            }
+          ]
+        },
+        "approvedUi": {
+          "title": "CueMend — Repair the timing. Keep the beat.",
+          "revision": 2,
+          "phase": "approved",
+          "conflicts": 8,
+          "protectedBeats": 3,
+          "proposalStatus": "Human approved",
+          "runtime": "WebMCP ready · 5 tools",
+          "track": "STAGED · PROTECT JON'S FINAL BREATH",
+          "action": "Approval is exact and live",
+          "tools": [
+            "get_rehearsal",
+            "audit_captions",
+            "stage_timing_plan",
+            "preview_timing_plan",
+            "discard_timing_plan"
+          ],
+          "activity": [
+            {
+              "actor": "HUMAN",
+              "action": "Protected artistic beat",
+              "detail": "Jon's final breath · revision 2"
+            },
+            {
+              "actor": "AGENT",
+              "action": "Inspected rehearsal state",
+              "detail": "Revision 2"
+            },
+            {
+              "actor": "AGENT",
+              "action": "Staged bounded timing search",
+              "detail": "6,561 evaluated · 256 feasible · revision 2"
+            },
+            {
+              "actor": "AGENT",
+              "action": "Previewed timing plan",
+              "detail": "Protect Jon's final breath · 8 cue changes · 0 conflicts"
+            },
+            {
+              "actor": "HUMAN",
+              "action": "Selected artistic alternative",
+              "detail": "Protect Jon's final breath · plan-1"
+            },
+            {
+              "actor": "HUMAN",
+              "action": "Approved exact timing plan",
+              "detail": "Protect Jon's final breath · approval e2355b749923"
+            }
+          ]
+        },
+        "committedUi": {
+          "title": "CueMend — Repair the timing. Keep the beat.",
+          "revision": 3,
+          "phase": "committed",
+          "conflicts": 0,
+          "protectedBeats": 3,
+          "proposalStatus": "Committed proof",
+          "runtime": "WebMCP ready · 3 tools",
+          "track": "ACTIVE TRACK",
+          "action": "Verify the committed artifact",
+          "tools": [
+            "get_rehearsal",
+            "audit_captions",
+            "verify_and_export"
+          ],
+          "activity": [
+            {
+              "actor": "AGENT",
+              "action": "Inspected rehearsal state",
+              "detail": "Revision 2"
+            },
+            {
+              "actor": "AGENT",
+              "action": "Staged bounded timing search",
+              "detail": "6,561 evaluated · 256 feasible · revision 2"
+            },
+            {
+              "actor": "AGENT",
+              "action": "Previewed timing plan",
+              "detail": "Protect Jon's final breath · 8 cue changes · 0 conflicts"
+            },
+            {
+              "actor": "HUMAN",
+              "action": "Selected artistic alternative",
+              "detail": "Protect Jon's final breath · plan-1"
+            },
+            {
+              "actor": "HUMAN",
+              "action": "Approved exact timing plan",
+              "detail": "Protect Jon's final breath · approval e2355b749923"
+            },
+            {
+              "actor": "AGENT",
+              "action": "Committed approved caption plan",
+              "detail": "8 → 0 conflicts · revision 3"
+            }
+          ]
+        },
+        "finished": {
+          "title": "CueMend — Repair the timing. Keep the beat.",
+          "revision": 3,
+          "phase": "committed",
+          "conflicts": 0,
+          "protectedBeats": 3,
+          "proposalStatus": "Committed proof",
+          "runtime": "WebMCP ready · 3 tools",
+          "track": "ACTIVE TRACK",
+          "action": "Verified, portable, still editable",
+          "tools": [
+            "get_rehearsal",
+            "audit_captions",
+            "verify_and_export"
+          ],
+          "activity": [
+            {
+              "actor": "AGENT",
+              "action": "Staged bounded timing search",
+              "detail": "6,561 evaluated · 256 feasible · revision 2"
+            },
+            {
+              "actor": "AGENT",
+              "action": "Previewed timing plan",
+              "detail": "Protect Jon's final breath · 8 cue changes · 0 conflicts"
+            },
+            {
+              "actor": "HUMAN",
+              "action": "Selected artistic alternative",
+              "detail": "Protect Jon's final breath · plan-1"
+            },
+            {
+              "actor": "HUMAN",
+              "action": "Approved exact timing plan",
+              "detail": "Protect Jon's final breath · approval e2355b749923"
+            },
+            {
+              "actor": "AGENT",
+              "action": "Committed approved caption plan",
+              "detail": "8 → 0 conflicts · revision 3"
+            },
+            {
+              "actor": "AGENT",
+              "action": "Verified and exported WebVTT",
+              "detail": "0 conflicts · VTT 958e9cc9968e · certificate 761df48f128c"
+            }
+          ]
+        }
+      }
+    ],
+    "webMcpEvents": [
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolInvoked",
+        "invocationId": "54A7107D60038160857B6D9069F54D77",
+        "toolName": "cuemend_get_rehearsal"
+      },
+      {
+        "method": "WebMCP.toolResponded",
+        "invocationId": "54A7107D60038160857B6D9069F54D77",
+        "status": "Completed"
+      },
+      {
+        "method": "WebMCP.toolInvoked",
+        "invocationId": "709B13E15C5C47F3409260ACFAE6AD47",
+        "toolName": "cuemend_audit_captions"
+      },
+      {
+        "method": "WebMCP.toolResponded",
+        "invocationId": "709B13E15C5C47F3409260ACFAE6AD47",
+        "status": "Completed"
+      },
+      {
+        "method": "WebMCP.toolInvoked",
+        "invocationId": "F63D3A0ED349C9DF74477A60DF76BA67",
+        "toolName": "cuemend_stage_timing_plan"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolResponded",
+        "invocationId": "F63D3A0ED349C9DF74477A60DF76BA67",
+        "status": "Completed"
+      },
+      {
+        "method": "WebMCP.toolInvoked",
+        "invocationId": "C0E14E07ABF9DFCE592BE7F010288745",
+        "toolName": "cuemend_preview_timing_plan"
+      },
+      {
+        "method": "WebMCP.toolResponded",
+        "invocationId": "C0E14E07ABF9DFCE592BE7F010288745",
+        "status": "Completed"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolInvoked",
+        "invocationId": "85F672F4876DBBBC31791EDA9D921EAC",
+        "toolName": "cuemend_stage_timing_plan"
+      },
+      {
+        "method": "WebMCP.toolResponded",
+        "invocationId": "85F672F4876DBBBC31791EDA9D921EAC",
+        "status": "Completed"
+      },
+      {
+        "method": "WebMCP.toolInvoked",
+        "invocationId": "94FF9D1DB18DD6CD080A481CD117F00F",
+        "toolName": "cuemend_get_rehearsal"
+      },
+      {
+        "method": "WebMCP.toolResponded",
+        "invocationId": "94FF9D1DB18DD6CD080A481CD117F00F",
+        "status": "Completed"
+      },
+      {
+        "method": "WebMCP.toolInvoked",
+        "invocationId": "4AE966D8CCF44E5898B5D769178D49EF",
+        "toolName": "cuemend_stage_timing_plan"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolResponded",
+        "invocationId": "4AE966D8CCF44E5898B5D769178D49EF",
+        "status": "Completed"
+      },
+      {
+        "method": "WebMCP.toolInvoked",
+        "invocationId": "7B796B74819D015328D9DA2722C9A757",
+        "toolName": "cuemend_preview_timing_plan"
+      },
+      {
+        "method": "WebMCP.toolResponded",
+        "invocationId": "7B796B74819D015328D9DA2722C9A757",
+        "status": "Completed"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolInvoked",
+        "invocationId": "3A40F4CCF5855C38B3494635FC072F73",
+        "toolName": "cuemend_commit_approved_plan"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolResponded",
+        "invocationId": "3A40F4CCF5855C38B3494635FC072F73",
+        "status": "Completed"
+      },
+      {
+        "method": "WebMCP.toolInvoked",
+        "invocationId": "1F95EE2324D8FF5A3DBE0C934639E6B2",
+        "toolName": "cuemend_verify_and_export"
+      },
+      {
+        "method": "WebMCP.toolResponded",
+        "invocationId": "1F95EE2324D8FF5A3DBE0C934639E6B2",
+        "status": "Completed"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolInvoked",
+        "invocationId": "7AD343CE6DC976284968093F8D0749D4",
+        "toolName": "cuemend_get_rehearsal"
+      },
+      {
+        "method": "WebMCP.toolResponded",
+        "invocationId": "7AD343CE6DC976284968093F8D0749D4",
+        "status": "Completed"
+      },
+      {
+        "method": "WebMCP.toolInvoked",
+        "invocationId": "0D920FDCAB2B0A68B7F1654BD131340E",
+        "toolName": "cuemend_audit_captions"
+      },
+      {
+        "method": "WebMCP.toolResponded",
+        "invocationId": "0D920FDCAB2B0A68B7F1654BD131340E",
+        "status": "Completed"
+      },
+      {
+        "method": "WebMCP.toolInvoked",
+        "invocationId": "99CC53079FE7F1835A5B1EA43FBC3452",
+        "toolName": "cuemend_stage_timing_plan"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolResponded",
+        "invocationId": "99CC53079FE7F1835A5B1EA43FBC3452",
+        "status": "Completed"
+      },
+      {
+        "method": "WebMCP.toolInvoked",
+        "invocationId": "E52668CF03653995756EA09D5D924CF5",
+        "toolName": "cuemend_preview_timing_plan"
+      },
+      {
+        "method": "WebMCP.toolResponded",
+        "invocationId": "E52668CF03653995756EA09D5D924CF5",
+        "status": "Completed"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolInvoked",
+        "invocationId": "C6095160494868684617ED8DFA95666C",
+        "toolName": "cuemend_stage_timing_plan"
+      },
+      {
+        "method": "WebMCP.toolResponded",
+        "invocationId": "C6095160494868684617ED8DFA95666C",
+        "status": "Completed"
+      },
+      {
+        "method": "WebMCP.toolInvoked",
+        "invocationId": "237D0E10FB63580369BFBB34848608F8",
+        "toolName": "cuemend_get_rehearsal"
+      },
+      {
+        "method": "WebMCP.toolResponded",
+        "invocationId": "237D0E10FB63580369BFBB34848608F8",
+        "status": "Completed"
+      },
+      {
+        "method": "WebMCP.toolInvoked",
+        "invocationId": "1E28C58BB5E9F705369D4F87F74C604C",
+        "toolName": "cuemend_stage_timing_plan"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolResponded",
+        "invocationId": "1E28C58BB5E9F705369D4F87F74C604C",
+        "status": "Completed"
+      },
+      {
+        "method": "WebMCP.toolInvoked",
+        "invocationId": "3B05B925693927F1B94899D5776A694F",
+        "toolName": "cuemend_preview_timing_plan"
+      },
+      {
+        "method": "WebMCP.toolResponded",
+        "invocationId": "3B05B925693927F1B94899D5776A694F",
+        "status": "Completed"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolInvoked",
+        "invocationId": "E61C160C164AACDFA54D10346D6CE2C2",
+        "toolName": "cuemend_commit_approved_plan"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolResponded",
+        "invocationId": "E61C160C164AACDFA54D10346D6CE2C2",
+        "status": "Completed"
+      },
+      {
+        "method": "WebMCP.toolInvoked",
+        "invocationId": "3A337CA01CCE913AAF109B566CB7F876",
+        "toolName": "cuemend_verify_and_export"
+      },
+      {
+        "method": "WebMCP.toolResponded",
+        "invocationId": "3A337CA01CCE913AAF109B566CB7F876",
+        "status": "Completed"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolInvoked",
+        "invocationId": "19AAE4745AC7468E91B0357F5C64745B",
+        "toolName": "cuemend_get_rehearsal"
+      },
+      {
+        "method": "WebMCP.toolResponded",
+        "invocationId": "19AAE4745AC7468E91B0357F5C64745B",
+        "status": "Completed"
+      },
+      {
+        "method": "WebMCP.toolInvoked",
+        "invocationId": "976B09D4F7B451AEC29826F15B26089A",
+        "toolName": "cuemend_audit_captions"
+      },
+      {
+        "method": "WebMCP.toolResponded",
+        "invocationId": "976B09D4F7B451AEC29826F15B26089A",
+        "status": "Completed"
+      },
+      {
+        "method": "WebMCP.toolInvoked",
+        "invocationId": "AFEC6C43ED26B89F013612B68137B36C",
+        "toolName": "cuemend_stage_timing_plan"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolResponded",
+        "invocationId": "AFEC6C43ED26B89F013612B68137B36C",
+        "status": "Completed"
+      },
+      {
+        "method": "WebMCP.toolInvoked",
+        "invocationId": "1FBB7584927D459B07F1BB8793F0E570",
+        "toolName": "cuemend_preview_timing_plan"
+      },
+      {
+        "method": "WebMCP.toolResponded",
+        "invocationId": "1FBB7584927D459B07F1BB8793F0E570",
+        "status": "Completed"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolInvoked",
+        "invocationId": "287D832265B3325FBC6D63C40904EB6B",
+        "toolName": "cuemend_stage_timing_plan"
+      },
+      {
+        "method": "WebMCP.toolResponded",
+        "invocationId": "287D832265B3325FBC6D63C40904EB6B",
+        "status": "Completed"
+      },
+      {
+        "method": "WebMCP.toolInvoked",
+        "invocationId": "39E3F74CC81FBEEF8F9FA982801FB840",
+        "toolName": "cuemend_get_rehearsal"
+      },
+      {
+        "method": "WebMCP.toolResponded",
+        "invocationId": "39E3F74CC81FBEEF8F9FA982801FB840",
+        "status": "Completed"
+      },
+      {
+        "method": "WebMCP.toolInvoked",
+        "invocationId": "746056D01BA9A47C70089FB9D234CE2C",
+        "toolName": "cuemend_stage_timing_plan"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolResponded",
+        "invocationId": "746056D01BA9A47C70089FB9D234CE2C",
+        "status": "Completed"
+      },
+      {
+        "method": "WebMCP.toolInvoked",
+        "invocationId": "15725EAF6603F37121D4AD58AB5EF639",
+        "toolName": "cuemend_preview_timing_plan"
+      },
+      {
+        "method": "WebMCP.toolResponded",
+        "invocationId": "15725EAF6603F37121D4AD58AB5EF639",
+        "status": "Completed"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolInvoked",
+        "invocationId": "96DB316FE69251DA5A3038FC4F4C1529",
+        "toolName": "cuemend_commit_approved_plan"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsRemoved"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolsAdded"
+      },
+      {
+        "method": "WebMCP.toolResponded",
+        "invocationId": "96DB316FE69251DA5A3038FC4F4C1529",
+        "status": "Completed"
+      },
+      {
+        "method": "WebMCP.toolInvoked",
+        "invocationId": "8D53C2BEC563CDE8721ACD0150CD7A7D",
+        "toolName": "cuemend_verify_and_export"
+      },
+      {
+        "method": "WebMCP.toolResponded",
+        "invocationId": "8D53C2BEC563CDE8721ACD0150CD7A7D",
+        "status": "Completed"
+      }
+    ]
+  }
+}

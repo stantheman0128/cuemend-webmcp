@@ -46,6 +46,22 @@ and update the same visible artifact.
 The **Copy judge prompt** button always produces the right bounded instruction
 for the current phase.
 
+## Verified live evidence
+
+The deployed app was exercised in Chrome 151 through Chrome's native CDP
+`WebMCP` domain—not a mocked page API. Three independent clean-reset runs each
+completed the full inspect → audit → stage → stale rejection → replan → human
+approval → dynamic commit → verify/export journey. A separate run completed the
+same product journey entirely through ordinary controls.
+
+![A live WebMCP-staged CueMend plan with five phase-appropriate tools](docs/verification/native-webmcp-staged.png)
+
+![The committed live track at revision 3 with zero conflicts and three read-only tools](docs/verification/native-webmcp-final.png)
+
+Machine-readable run summaries, screenshots and the dependency-free verifier
+are in [`docs/verification`](docs/verification) and
+[`scripts/browser-verification.mjs`](scripts/browser-verification.mjs).
+
 ## WebMCP tools
 
 CueMend registers tools with the current
@@ -81,6 +97,18 @@ Run the deterministic contract suite:
 npm test
 ```
 
+On Windows with Chrome 150 or newer, reproduce the standard-browser journey
+and three native WebMCP runs against the public deployment:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts\run-browser-verification.ps1
+```
+
+The runner starts isolated headless profiles and enables Chrome's experimental
+`WebMCP` feature only for the native pass. It does not touch an existing Chrome
+profile. Temporary profiles are intentionally reported instead of silently
+deleting browser data.
+
 ## Architecture
 
 ```text
@@ -93,6 +121,7 @@ src/webmcp.js          feature-detected dynamic WebMCP adapter
 src/app.js             visible stage, timeline, playback and UI actions
 tests/                 deterministic engine, command and tool contracts
 scripts/serve.mjs      dependency-free local static server
+scripts/browser-verification.mjs  raw CDP UI and native WebMCP verifier
 docs/                  product contract, evidence and demo materials
 research/              official audit, 100 ideas and selection tournament
 ```

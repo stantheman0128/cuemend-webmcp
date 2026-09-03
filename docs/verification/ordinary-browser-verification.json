@@ -1,0 +1,263 @@
+{
+  "ok": true,
+  "mode": "ordinary",
+  "appUrl": "https://stantheman0128.github.io/cuemend-webmcp/?build=2b7534a",
+  "testedAt": "2026-09-03T22:03:47.857Z",
+  "target": {
+    "title": "",
+    "url": "https://stantheman0128.github.io/cuemend-webmcp/?build=2b7534a"
+  },
+  "browser": {
+    "product": "Chrome/151.0.7922.175",
+    "protocolVersion": "1.3",
+    "jsVersion": "15.1.206.23",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36"
+  },
+  "loaded": {
+    "title": "CueMend — Repair the timing. Keep the beat.",
+    "revision": 1,
+    "phase": "baseline",
+    "conflicts": 7,
+    "protectedBeats": 2,
+    "proposalStatus": "None",
+    "runtime": "Checking WebMCP…",
+    "track": "ACTIVE TRACK",
+    "action": "Audit the active track",
+    "tools": [],
+    "activity": []
+  },
+  "diagnostics": {
+    "runtimeExceptions": [],
+    "consoleErrors": [],
+    "browserLogErrors": []
+  },
+  "evidence": {
+    "initial": {
+      "title": "CueMend — Repair the timing. Keep the beat.",
+      "revision": 1,
+      "phase": "baseline",
+      "conflicts": 7,
+      "protectedBeats": 2,
+      "proposalStatus": "None",
+      "runtime": "Standard UI mode",
+      "track": "ACTIVE TRACK",
+      "action": "Audit the active track",
+      "tools": [
+        "ordinary UI mode"
+      ],
+      "activity": [
+        {
+          "actor": "SYSTEM",
+          "action": "Loaded deterministic rehearsal fixture",
+          "detail": "Revision 1 · 10 cues · 2 protected beats"
+        }
+      ]
+    },
+    "stale": {
+      "title": "CueMend — Repair the timing. Keep the beat.",
+      "revision": 2,
+      "phase": "stale",
+      "conflicts": 8,
+      "protectedBeats": 3,
+      "proposalStatus": "Stale",
+      "runtime": "Standard UI mode",
+      "track": "ACTIVE TRACK",
+      "action": "The human changed the brief",
+      "tools": [
+        "ordinary UI mode"
+      ],
+      "activity": [
+        {
+          "actor": "SYSTEM",
+          "action": "Loaded deterministic rehearsal fixture",
+          "detail": "Revision 1 · 10 cues · 2 protected beats"
+        },
+        {
+          "actor": "HUMAN",
+          "action": "Audited active caption track",
+          "detail": "7 conflicts found"
+        },
+        {
+          "actor": "HUMAN",
+          "action": "Staged bounded timing search",
+          "detail": "6,561 evaluated · 384 feasible · revision 1"
+        },
+        {
+          "actor": "HUMAN",
+          "action": "Previewed timing plan",
+          "detail": "Lower-left projection balance · 7 cue changes · 0 conflicts"
+        },
+        {
+          "actor": "HUMAN",
+          "action": "Protected artistic beat",
+          "detail": "Jon's final breath · revision 2"
+        }
+      ]
+    },
+    "final": {
+      "title": "CueMend — Repair the timing. Keep the beat.",
+      "revision": 3,
+      "phase": "committed",
+      "conflicts": 0,
+      "protectedBeats": 3,
+      "proposalStatus": "Committed proof",
+      "runtime": "Standard UI mode",
+      "track": "ACTIVE TRACK",
+      "action": "Verified, portable, still editable",
+      "tools": [
+        "ordinary UI mode"
+      ],
+      "activity": [
+        {
+          "actor": "HUMAN",
+          "action": "Staged bounded timing search",
+          "detail": "6,561 evaluated · 256 feasible · revision 2"
+        },
+        {
+          "actor": "HUMAN",
+          "action": "Previewed timing plan",
+          "detail": "Protect Jon's final breath · 8 cue changes · 0 conflicts"
+        },
+        {
+          "actor": "HUMAN",
+          "action": "Selected artistic alternative",
+          "detail": "Protect Jon's final breath · plan-1"
+        },
+        {
+          "actor": "HUMAN",
+          "action": "Approved exact timing plan",
+          "detail": "Protect Jon's final breath · approval e2355b749923"
+        },
+        {
+          "actor": "HUMAN",
+          "action": "Committed approved caption plan",
+          "detail": "8 → 0 conflicts · revision 3"
+        },
+        {
+          "actor": "HUMAN",
+          "action": "Verified and exported WebVTT",
+          "detail": "0 conflicts · VTT 958e9cc9968e · certificate 761df48f128c"
+        }
+      ]
+    },
+    "keyboardFocusOrder": [
+      {
+        "tag": "A",
+        "id": null,
+        "text": "Skip to rehearsal workspace",
+        "href": "#workspace"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "copy-prompt-button",
+        "text": "✦ Copy judge prompt",
+        "href": null
+      },
+      {
+        "tag": "BUTTON",
+        "id": "reset-button",
+        "text": "Reset demo",
+        "href": null
+      },
+      {
+        "tag": "BUTTON",
+        "id": "baseline-view",
+        "text": "Active",
+        "href": null
+      },
+      {
+        "tag": "BUTTON",
+        "id": "play-button",
+        "text": "▶",
+        "href": null
+      },
+      {
+        "tag": "INPUT",
+        "id": "time-scrubber",
+        "text": null,
+        "href": null
+      },
+      {
+        "tag": "BUTTON",
+        "id": "speed-button",
+        "text": "1×",
+        "href": null
+      },
+      {
+        "tag": "BUTTON",
+        "id": null,
+        "text": "◆\n          \n            Audience laugh\n            Let the joke breathe before ",
+        "href": null
+      },
+      {
+        "tag": "BUTTON",
+        "id": null,
+        "text": "◆\n          \n            Lighting reveal\n            Keep the visual reveal free",
+        "href": null
+      },
+      {
+        "tag": "BUTTON",
+        "id": null,
+        "text": "◇\n          \n            Jon's final breath\n            Optional pause; only the",
+        "href": null
+      },
+      {
+        "tag": "BUTTON",
+        "id": null,
+        "text": "Run deterministic audit",
+        "href": null
+      },
+      {
+        "tag": "BUTTON",
+        "id": null,
+        "text": "Stage repair plan",
+        "href": null
+      },
+      {
+        "tag": "DIV",
+        "id": "issue-list",
+        "text": "01\n          \n            Cue overlap\n            cue-01 overlaps cue-02 by 0.10",
+        "href": null
+      },
+      {
+        "tag": "A",
+        "id": "source-link",
+        "text": "Source & methodology ↗",
+        "href": "https://github.com/stantheman0128/cuemend-webmcp"
+      },
+      {
+        "tag": "BODY",
+        "id": null,
+        "text": "Skip to rehearsal workspace\n\n    \n      \n        \n          \n        \n        \n ",
+        "href": null
+      },
+      {
+        "tag": "A",
+        "id": null,
+        "text": "Skip to rehearsal workspace",
+        "href": "#workspace"
+      }
+    ],
+    "reducedMotion": {
+      "matches": true,
+      "toastTransition": "1e-05s",
+      "markAnimation": "1e-05s"
+    },
+    "transport": {
+      "scrubbed": {
+        "timecode": "00:08.8",
+        "value": 8.8,
+        "caption": "It heard you. It just chose silence."
+      },
+      "advancedTo": 8.93,
+      "pausedAt": 8.93,
+      "remainedAt": 8.93,
+      "doubleSpeed": "2×"
+    },
+    "splitLayout": {
+      "innerWidth": 820,
+      "documentWidth": 820,
+      "horizontalOverflow": false
+    }
+  }
+}

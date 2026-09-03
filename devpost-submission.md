@@ -138,7 +138,7 @@ accessibility or replace professional caption review.
 - Public source: https://github.com/stantheman0128/cuemend-webmcp
 - Public YouTube demo: `PENDING_VIDEO`
 - Video duration: `PENDING_DURATION`
-- Tested clients: `PENDING_NATIVE_WEBMCP_EVIDENCE`
+- Tested clients: Chrome 151.0.7922.175 with the native CDP `WebMCP` domain; ordinary UI fallback in the same browser with WebMCP disabled
 
 ## Testing instructions
 

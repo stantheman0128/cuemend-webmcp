@@ -99,15 +99,15 @@ Sources: [build tools](https://developer.chrome.com/docs/ai/webmcp/build-tools),
 
 The final project is not ready unless all are true:
 
-- [ ] Deployed page exposes discoverable WebMCP tools.
-- [ ] A real agent completes the critical multi-tool path from a clean session.
-- [ ] Human actions and tool calls share one command/state engine and update the visible UI.
-- [ ] Expected failures are recoverable; stale/mutated confirmation is rejected.
+- [x] Deployed page exposes discoverable WebMCP tools.
+- [x] A real agent completes the critical multi-tool path from a clean session.
+- [x] Human actions and tool calls share one command/state engine and update the visible UI.
+- [x] Expected failures are recoverable; stale/mutated confirmation is rejected.
 - [ ] At least one adversarial or failure branch is filmed and tested.
-- [ ] Live URL works anonymously and stays stable.
-- [ ] Public repository contains actual code, setup, license, and fixtures.
+- [x] Live URL works anonymously and stays stable.
+- [x] Public repository contains actual code, setup, license, and fixtures.
 - [ ] Public YouTube video is under three minutes, has audio, and opens with a working result—not a logo sequence.
-- [ ] Devpost text explicitly explains WebMCP fit, UX improvement, novel human-agent ability, and implementation.
+- [x] Devpost text explicitly explains WebMCP fit, UX improvement, novel human-agent ability, and implementation.
 - [ ] Entry is visibly `Submitted` before the deadline, then all artifacts are frozen.
 
 ## A note on accuracy

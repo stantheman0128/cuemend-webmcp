@@ -20,12 +20,12 @@ acknowledgment and final submission confirmation.
   registration/execution AbortSignals and bounded normalized responses.
   Verify: `node --test tests/webmcp.test.js`.
 
-- [ ] **4. Build stage, timeline and responsive product shell**
+- [x] **4. Build stage, timeline and responsive product shell**
   Acceptance: baseline conflicts are immediately legible, playback/scrub works,
   protected beats are actionable, A/B preview and human approval are visible.
   Verify: desktop and split-width browser screenshots plus keyboard pass.
 
-- [ ] **5. Connect ordinary UI to the canonical command layer**
+- [x] **5. Connect ordinary UI to the canonical command layer**
   Acceptance: audit → stage → protect beat → stale → restage → select → approve
   → commit → verify/export works without WebMCP and records provenance.
   Verify: one clean reset manual run and matching state snapshot.
@@ -36,13 +36,13 @@ acknowledgment and final submission confirmation.
   paths leave state safe.
   Verify: `npm test` and focused `rg` checks.
 
-- [ ] **7. Verify native WebMCP end-to-end**
+- [x] **7. Verify native WebMCP end-to-end**
   Acceptance: real browser agent discovers tools, completes the multi-tool loop,
   an actual stale attempt is refused, UI updates after each call, and reset works
   three times. A local harness alone does not count.
   Verify: recorded tool inventory/results and screenshots from live runs.
 
-- [ ] **8. Package public repository and live deployment**
+- [x] **8. Package public repository and live deployment**
   Acceptance: MIT license, reproducible README, exact limitations, source-linked
   standards context, public URL, deployed-source parity and zero-login cold load.
   Verify: clean clone/static serve and remote HTTP/browser checks.
