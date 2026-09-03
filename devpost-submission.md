@@ -137,7 +137,7 @@ accessibility or replace professional caption review.
 - Live app: https://stantheman0128.github.io/cuemend-webmcp/
 - Public source: https://github.com/stantheman0128/cuemend-webmcp
 - Public YouTube demo: `PENDING_VIDEO`
-- Video duration: `PENDING_DURATION`
+- Video duration: 2:49.916 local master; final YouTube duration still requires verification
 - Tested clients: Chrome 151.0.7922.175 with the native CDP `WebMCP` domain; ordinary UI fallback in the same browser with WebMCP disabled
 - Devpost draft: https://devpost.com/software/cuemend (submission `1169845`, not yet Submitted)
 

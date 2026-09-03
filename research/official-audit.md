@@ -103,7 +103,7 @@ The final project is not ready unless all are true:
 - [x] A real agent completes the critical multi-tool path from a clean session.
 - [x] Human actions and tool calls share one command/state engine and update the visible UI.
 - [x] Expected failures are recoverable; stale/mutated confirmation is rejected.
-- [ ] At least one adversarial or failure branch is filmed and tested.
+- [x] At least one adversarial or failure branch is filmed and tested.
 - [x] Live URL works anonymously and stays stable.
 - [x] Public repository contains actual code, setup, license, and fixtures.
 - [ ] Public YouTube video is under three minutes, has audio, and opens with a working result—not a logo sequence.

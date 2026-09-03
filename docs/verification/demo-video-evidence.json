@@ -1,0 +1,38 @@
+{
+  "status": "verified-local-master",
+  "sourceCommit": "b86751e270fbf96c3eb5cbca554cdc8b86211541",
+  "githubActionsRun": "https://github.com/stantheman0128/cuemend-webmcp/actions/runs/33816454390",
+  "artifact": "cuemend-webmcp-demo.mp4",
+  "sha256": "96ba8a62aa879607222d9cb6b03ecc69b2ba803261504fd1e69a960272d300f2",
+  "sizeBytes": 5972080,
+  "durationSeconds": 169.916327,
+  "video": {
+    "codec": "h264",
+    "width": 1280,
+    "height": 720,
+    "pixelFormat": "yuv420p",
+    "framesPerSecond": 30
+  },
+  "audio": {
+    "codec": "aac",
+    "sampleRateHz": 22050,
+    "channels": 1,
+    "voice": "Microsoft Zira Desktop",
+    "meanVolumeDb": -20.2,
+    "maxVolumeDb": -2.4,
+    "silenceThresholdDb": -45,
+    "unexpectedSilenceOverSeconds": 0
+  },
+  "captions": {
+    "format": "srt",
+    "blocks": 8,
+    "firstTimestamp": "00:00:00,000 --> 00:00:12,997",
+    "lastTimestamp": "00:02:25,022 --> 00:02:49,267",
+    "replacementCharacters": 0
+  },
+  "visualReviewSeconds": [2, 20, 50, 60, 90, 120, 130, 165],
+  "youtube": {
+    "status": "pending-human-file-selection-and-publication",
+    "localFile": "artifacts/demo-cloud/cuemend-webmcp-demo.mp4"
+  }
+}

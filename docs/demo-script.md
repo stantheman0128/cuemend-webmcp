@@ -96,10 +96,11 @@ the agent does the exhaustive work, while the human keeps the beat.”
 
 ## Final video verification
 
-- [ ] Result appears in the first 10–12 seconds.
-- [ ] Native tool discovery and at least three real calls are legible.
-- [ ] Human lock, stale rejection and dynamic commit tool are visible.
-- [ ] Final state is genuinely zero conflicts after a clean reset.
-- [ ] Narration is audible and the final YouTube duration is under three minutes.
+- [x] Result appears in the first 10–12 seconds.
+- [x] Native tool discovery and at least three real calls are legible.
+- [x] Human lock, stale rejection and dynamic commit tool are visible.
+- [x] Final state is genuinely zero conflicts after a clean reset.
+- [x] Local-master narration is audible and the duration is under three minutes (169.916 seconds).
+- [ ] Final YouTube transcode remains under three minutes.
 - [ ] Video is public, not unlisted/private, and opens without authentication.
 - [ ] Description links the live app and public source repository.
