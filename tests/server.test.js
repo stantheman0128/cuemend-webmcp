@@ -63,11 +63,13 @@ test("static server serves the app with safe methods, paths, and headers", async
   assert.equal(post.status, 405);
   assert.equal(post.headers.allow, "GET, HEAD");
 
-  const traversal = await rawRequest({
-    port,
-    path: "/%2e%2e%5cpackage.json",
-  });
-  assert.equal(traversal.status, 403);
+  for (const path of [
+    "/%2e%2e%5cpackage.json",
+    "/%2e%2e%2fpackage.json",
+  ]) {
+    const traversal = await rawRequest({ port, path });
+    assert.equal(traversal.status, 403);
+  }
 
   const missing = await rawRequest({ port, path: "/not-here.txt" });
   assert.equal(missing.status, 404);

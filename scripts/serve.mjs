@@ -41,6 +41,9 @@ function responseHeaders(filePath) {
 
 function safePath(url, rootDirectory) {
   const pathname = decodeURIComponent(new URL(url, "http://local").pathname);
+  // Reject Windows separators on every platform so an encoded traversal has
+  // the same fail-closed result in local Windows runs and Linux CI.
+  if (pathname.includes("\\")) return null;
   const relative = pathname === "/" ? "index.html" : pathname.slice(1);
   const filePath = resolve(rootDirectory, relative);
   if (
