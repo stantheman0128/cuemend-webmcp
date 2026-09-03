@@ -50,6 +50,11 @@ test("static server serves the app with safe methods, paths, and headers", async
   assert.equal(module.status, 200);
   assert.match(module.headers["content-type"], /^text\/javascript/);
 
+  const favicon = await rawRequest({ port, path: "/favicon.svg" });
+  assert.equal(favicon.status, 200);
+  assert.match(favicon.headers["content-type"], /^image\/svg\+xml/);
+  assert.match(favicon.body, /<svg/);
+
   const head = await rawRequest({ port, method: "HEAD" });
   assert.equal(head.status, 200);
   assert.equal(head.body, "");
