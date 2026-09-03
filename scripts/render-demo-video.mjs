@@ -88,17 +88,17 @@ for (let index = 0; index < scenes.length; index += 1) {
     : scene.crop === "pan-down"
       ? `(ih-oh)*min(t/${duration.toFixed(3)},1)`
       : "0";
-  const boxY = scene.overlay === "top" ? 28 : "h-122";
-  const titleY = scene.overlay === "top" ? 48 : "h-102";
-  const subtitleY = scene.overlay === "top" ? 80 : "h-70";
+  const boxY = scene.overlay === "top" ? 28 : 598;
+  const titleY = scene.overlay === "top" ? 48 : 618;
+  const subtitleY = scene.overlay === "top" ? 80 : 650;
   const fadeOutAt = Math.max(0, duration - 0.3).toFixed(3);
   const filter = [
     "scale=1280:-2",
     `crop=1280:720:0:'${cropY}'`,
     "fps=30",
     "format=yuv420p",
-    `drawbox=x=30:y=${boxY}:w=w-60:h=94:color=0x08090ddd:t=fill`,
-    `drawbox=x=30:y=${boxY}:w=w-60:h=94:color=0x75f3d166:t=2`,
+    `drawbox=x=30:y=${boxY}:w=1220:h=94:color=0x08090ddd:t=fill`,
+    `drawbox=x=30:y=${boxY}:w=1220:h=94:color=0x75f3d166:t=2`,
     `drawtext=fontfile='${filterPath(semiboldFont)}':textfile='${filterPath(titlePath)}':fontcolor=0x75f3d1:fontsize=20:x=52:y=${titleY}`,
     `drawtext=fontfile='${filterPath(regularFont)}':textfile='${filterPath(subtitlePath)}':fontcolor=0xf6f3ec:fontsize=28:x=52:y=${subtitleY}`,
     `fade=t=in:st=0:d=0.3`,
