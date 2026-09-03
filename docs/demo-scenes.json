@@ -1,0 +1,74 @@
+[
+  {
+    "id": "01-result-first",
+    "image": "docs/verification/native-webmcp-final.png",
+    "crop": "top",
+    "overlay": "bottom",
+    "title": "RESULT FIRST · VERIFIED REVISION 3",
+    "subtitle": "0 conflicts · 3 protected beats · editable, digest-bound proof",
+    "narration": "This is CueMend: a browser agent repairs caption timing while a human protects the performance. Here is the result first—zero conflicts and a verifiable, editable export."
+  },
+  {
+    "id": "02-human-problem",
+    "image": "docs/verification/native-webmcp-baseline.png",
+    "crop": "top",
+    "overlay": "bottom",
+    "title": "RESET · FICTIONAL 32-SECOND REHEARSAL",
+    "subtitle": "10 cues · 7 reproducible issues · 2 human-protected beats",
+    "narration": "We reset to a fictional thirty-two-second rehearsal with ten captions and seven independent timing problems. Automation can measure overlap, reading rate, and visual collisions. It cannot decide whether an audience laugh, lighting reveal, or actor's breath deserves silence. Those decisions stay in the human interface."
+  },
+  {
+    "id": "03-native-stage",
+    "image": "docs/verification/native-webmcp-staged.png",
+    "crop": "pan-down",
+    "overlay": "top",
+    "title": "LIVE WEBMCP · GET → AUDIT → STAGE",
+    "subtitle": "6,561 bounded tracks · active captions remain untouched",
+    "narration": "Through Chrome's native Web M C P channel, the agent inspects the live revision, audits the active track, and calls CueMend's staging tool. The browser deterministically evaluates all six thousand five hundred sixty-one authored combinations, then exposes three zero-conflict alternatives. Staging never mutates the active captions."
+  },
+  {
+    "id": "04-human-lock",
+    "image": "docs/verification/native-webmcp-stale-refused.png",
+    "crop": "top",
+    "overlay": "bottom",
+    "title": "HUMAN AUTHORITY · PROTECT JON'S BREATH",
+    "subtitle": "revision 1 → 2 · 7 → 8 issues · old proposal becomes stale",
+    "narration": "The first live preview minimizes motion, but it crosses Jon's optional final breath. The stage manager protects that beat with one visible click. The workspace moves to revision two, the conflict count rises to eight, and the old proposal becomes stale."
+  },
+  {
+    "id": "05-stale-refusal",
+    "image": "docs/verification/native-webmcp-stale-refused.png",
+    "crop": "pan-down",
+    "overlay": "top",
+    "title": "LIVE SAFETY CHECK · REVISION 1 REQUEST ON REVISION 2",
+    "subtitle": "STALE_REVISION · refused · visible state unchanged",
+    "narration": "When the agent retries its revision-one request, CueMend returns stale revision and changes nothing. The capability inventory also retires unsafe proposal tools. The agent must inspect the current state and replan under the new human constraint."
+  },
+  {
+    "id": "06-exact-approval",
+    "image": "docs/verification/native-webmcp-approved.png",
+    "crop": "pan-down",
+    "overlay": "top",
+    "title": "HUMAN SELECTS + APPROVES THE EXACT PLAN",
+    "subtitle": "digest-bound authority · one-shot commit capability appears",
+    "narration": "The new search finds two hundred fifty-six legal tracks. The agent previews plan one, but only the human can select and approve it. Approval binds the exact proposal, plan, revision, and S H A two fifty-six digest. Only then does the one-shot commit tool appear."
+  },
+  {
+    "id": "07-one-shot-commit",
+    "image": "docs/verification/native-webmcp-final.png",
+    "crop": "pan-down",
+    "overlay": "top",
+    "title": "LIVE WEBMCP · COMMIT_APPROVED_PLAN",
+    "subtitle": "revalidated · idempotent · revision 3 · mutation tools retire",
+    "narration": "The agent invokes that temporary commit capability with an idempotency key. CueMend revalidates the approval and beat locks before changing anything. The shared page immediately shows revision three, zero conflicts, a clean cue rail, and an immutable receipt. Mutation tools disappear."
+  },
+  {
+    "id": "08-verify-export",
+    "image": "docs/verification/ordinary-ui-final-desktop.png",
+    "crop": "top",
+    "overlay": "bottom",
+    "title": "LIVE WEBMCP · VERIFY_AND_EXPORT",
+    "subtitle": "editable WebVTT · SHA-256 certificate · explicit limitations",
+    "narration": "Finally, the agent independently re-audits the committed track and exports editable Web V T T plus a limitations certificate. The certificate proves this exact fictional fixture under the named demo profile; it does not claim universal accessibility compliance. CueMend lets the agent do exhaustive mechanical work while the human keeps the beat."
+  }
+]

@@ -6,6 +6,7 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
+    "demo:video": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build-demo-video.ps1",
     "serve": "node scripts/serve.mjs",
     "test": "node --test"
   },
