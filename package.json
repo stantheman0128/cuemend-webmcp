@@ -1,0 +1,15 @@
+{
+  "name": "cuemend-webmcp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A WebMCP rehearsal room for human-guided, verifiable caption timing repair.",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "serve": "node scripts/serve.mjs",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

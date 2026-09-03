@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="CueMend is a WebMCP rehearsal room where humans protect dramatic beats and agents repair caption timing with verifiable, editable output."
+    />
+    <meta name="theme-color" content="#090a10" />
+    <title>CueMend — Repair the timing. Keep the beat.</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#workspace">Skip to rehearsal workspace</a>
+
+    <header class="app-header">
+      <div class="brand-lockup" aria-label="CueMend">
+        <div class="brand-mark" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+        <div>
+          <div class="brand-name">CueMend</div>
+          <div class="brand-tagline">Repair the timing. Keep the beat.</div>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <div class="runtime-badge" id="runtime-badge" data-state="checking">
+          <span class="runtime-dot" aria-hidden="true"></span>
+          <span id="runtime-label">Checking WebMCP…</span>
+        </div>
+        <button class="button button-quiet" id="copy-prompt-button" type="button">
+          <span aria-hidden="true">✦</span> Copy judge prompt
+        </button>
+        <button class="button button-quiet" id="reset-button" type="button">
+          Reset demo
+        </button>
+      </div>
+    </header>
+
+    <main class="workspace" id="workspace">
+      <section class="rehearsal-column" aria-labelledby="rehearsal-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Rehearsal 04 · “The Listening City”</p>
+            <h1 id="rehearsal-title">The performance is the source of truth.</h1>
+          </div>
+          <div class="revision-pill">
+            <span>Revision</span>
+            <strong id="revision-value">1</strong>
+          </div>
+        </div>
+
+        <article class="stage-card" aria-label="Caption rehearsal preview">
+          <div class="stage-toolbar">
+            <div class="live-indicator"><span></span> Deterministic fixture</div>
+            <div class="view-switch" role="group" aria-label="Preview track">
+              <button class="view-option is-active" id="baseline-view" type="button">
+                Active
+              </button>
+              <button class="view-option" id="proposal-view" type="button" disabled>
+                Staged A/B
+              </button>
+            </div>
+          </div>
+
+          <div class="stage-scene" id="stage-scene">
+            <div class="stage-grain" aria-hidden="true"></div>
+            <div class="stage-arch" aria-hidden="true"></div>
+            <div class="projection-title" id="projection-title" aria-hidden="true">
+              ACT II · THE CITY LISTENS
+            </div>
+            <div class="spotlight spotlight-mara" aria-hidden="true"></div>
+            <div class="spotlight spotlight-jon" aria-hidden="true"></div>
+
+            <div class="actor actor-mara" id="actor-mara" aria-label="Mara on stage">
+              <div class="actor-head"></div>
+              <div class="actor-body"></div>
+              <span>MARA</span>
+            </div>
+            <div class="actor actor-jon" id="actor-jon" aria-label="Jon on stage">
+              <div class="actor-head"></div>
+              <div class="actor-body"></div>
+              <span>JON</span>
+            </div>
+
+            <div class="beat-now" id="beat-now" hidden>
+              <span aria-hidden="true">◆</span>
+              <span id="beat-now-label"></span>
+            </div>
+
+            <div class="caption-overlay position-bottom" id="caption-overlay" aria-live="polite">
+              <div class="caption-speaker" id="caption-speaker">REHEARSAL READY</div>
+              <div class="caption-text" id="caption-text">Press play or scrub the cue rail.</div>
+            </div>
+
+            <div class="stage-corner stage-corner-left">CAM A · WIDE</div>
+            <div class="stage-corner stage-corner-right" id="stage-track-label">
+              ACTIVE TRACK
+            </div>
+          </div>
+
+          <div class="transport">
+            <button class="play-button" id="play-button" type="button" aria-label="Play rehearsal">
+              <span id="play-icon" aria-hidden="true">▶</span>
+            </button>
+            <span class="timecode" id="current-time">00:00.0</span>
+            <label class="scrubber-label">
+              <span class="sr-only">Rehearsal time</span>
+              <input
+                id="time-scrubber"
+                type="range"
+                min="0"
+                max="32"
+                step="0.01"
+                value="0"
+              />
+            </label>
+            <span class="timecode timecode-muted">00:32.0</span>
+            <button class="speed-button" id="speed-button" type="button" aria-label="Playback speed">
+              1×
+            </button>
+          </div>
+        </article>
+
+        <article class="timeline-card" aria-labelledby="timeline-title">
+          <div class="timeline-heading">
+            <div>
+              <p class="eyebrow">Shared artifact</p>
+              <h2 id="timeline-title">Cue rail</h2>
+            </div>
+            <div class="timeline-legend" aria-label="Timeline legend">
+              <span><i class="legend-cue"></i> cue</span>
+              <span><i class="legend-error"></i> conflict</span>
+              <span><i class="legend-lock"></i> protected beat</span>
+            </div>
+          </div>
+          <div class="timeline" id="timeline" aria-label="Caption cue timeline"></div>
+          <div class="playhead" id="playhead" aria-hidden="true"></div>
+        </article>
+
+        <article class="intent-card" aria-labelledby="intent-title">
+          <div>
+            <p class="eyebrow">Human authority</p>
+            <h2 id="intent-title">Artistic beats</h2>
+            <p>
+              The agent can search every legal timing combination. Only the stage
+              manager decides which moments must remain text-free.
+            </p>
+          </div>
+          <div class="beat-controls" id="beat-controls"></div>
+        </article>
+      </section>
+
+      <aside class="intelligence-column" aria-labelledby="intelligence-title">
+        <div class="intelligence-header">
+          <div>
+            <p class="eyebrow">Rehearsal intelligence</p>
+            <h2 id="intelligence-title">Evidence, not vibes.</h2>
+          </div>
+          <span class="phase-badge" id="phase-badge">BASELINE</span>
+        </div>
+
+        <div class="metric-grid" aria-label="Caption audit metrics">
+          <div class="metric metric-primary">
+            <span class="metric-label">Conflicts</span>
+            <strong id="metric-conflicts">7</strong>
+            <span class="metric-note" id="metric-conflicts-note">needs repair</span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Max reading rate</span>
+            <strong><span id="metric-cps">22.0</span><small> cps</small></strong>
+            <span class="metric-note">profile max 20</span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Protected beats</span>
+            <strong id="metric-beats">2</strong>
+            <span class="metric-note">human controlled</span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Search space</span>
+            <strong>6,561</strong>
+            <span class="metric-note">bounded tracks</span>
+          </div>
+        </div>
+
+        <section class="action-panel" aria-labelledby="action-title">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Next safe action</p>
+              <h3 id="action-title">Audit the active track</h3>
+            </div>
+            <span class="step-count" id="step-count">01</span>
+          </div>
+          <p class="action-copy" id="action-copy">
+            Read the exact revision and turn every constraint failure into a
+            reproducible cue-level finding.
+          </p>
+          <div class="action-buttons" id="action-buttons">
+            <button class="button button-primary" id="audit-button" type="button">
+              Run deterministic audit
+            </button>
+          </div>
+        </section>
+
+        <section class="issues-panel" aria-labelledby="issues-title">
+          <div class="panel-heading compact">
+            <h3 id="issues-title">Current findings</h3>
+            <span class="count-badge" id="issues-count">7</span>
+          </div>
+          <div class="issue-list" id="issue-list"></div>
+        </section>
+
+        <section class="proposal-panel" id="proposal-panel" aria-labelledby="proposal-title">
+          <div class="panel-heading compact">
+            <h3 id="proposal-title">Staged alternatives</h3>
+            <span class="proposal-status" id="proposal-status">None</span>
+          </div>
+          <div id="proposal-content" class="empty-state">
+            <span aria-hidden="true">⌁</span>
+            <p>No agent proposal yet. Active captions stay untouched.</p>
+          </div>
+        </section>
+
+        <section class="profile-note">
+          <span class="profile-icon" aria-hidden="true">i</span>
+          <div>
+            <strong>CueMend Demo Theatre Profile v1</strong>
+            <p>
+              Transparent fixture rules—not universal accessibility or compliance
+              certification.
+            </p>
+          </div>
+        </section>
+      </aside>
+    </main>
+
+    <section class="activity-rail" aria-labelledby="activity-title">
+      <div class="activity-title-block">
+        <span class="activity-pulse" aria-hidden="true"></span>
+        <div>
+          <p class="eyebrow">Shared provenance</p>
+          <h2 id="activity-title">Activity rail</h2>
+        </div>
+      </div>
+      <div class="activity-list" id="activity-list"></div>
+      <div class="tool-inventory" id="tool-inventory" aria-label="Current WebMCP tools"></div>
+    </section>
+
+    <footer class="app-footer">
+      <p>
+        Fictional rehearsal data. Deterministic browser-only engine. No dialogue,
+        cue, or approval data leaves this tab.
+      </p>
+      <a href="https://github.com/stantheman0128/cuemend-webmcp" id="source-link">
+        Source &amp; methodology <span aria-hidden="true">↗</span>
+      </a>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>
+
