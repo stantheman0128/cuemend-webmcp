@@ -51,8 +51,9 @@ acknowledgment and final submission confirmation.
   Acceptance: polished screenshots, under-three-minute narrated script/video,
   concise English Devpost copy, testing instructions and exact WebMCP explanation.
   Verify: duration/audio/public visibility/URL checks and submission checklist.
-  Progress: the 169.916-second local master, SRT, thumbnail, CI metadata and
-  visual/audio review passed; public YouTube publication remains.
+  Progress: the 169.916-second local master, 47-cue phrase-level YouTube SRT,
+  thumbnail, CI metadata and visual/audio review passed; public YouTube
+  publication remains.
 
 - [ ] **10. Devpost handoff**
   Acceptance: every required field and link is ready. Do not make a formal

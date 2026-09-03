@@ -30,6 +30,16 @@
     "lastTimestamp": "00:02:25,022 --> 00:02:49,267",
     "replacementCharacters": 0
   },
+  "youtubeCaptions": {
+    "file": "docs/verification/cuemend-youtube-captions.srt",
+    "sha256": "96b61dd15b66966dadfee88f9680bc2e4fd3a0b5b34d702203069ea1524d2982",
+    "blocks": 47,
+    "completeNarration": true,
+    "maximumLinesPerBlock": 2,
+    "maximumLineCharacters": 42,
+    "maximumCharactersPerSecond": 14.4,
+    "lastTimestamp": "00:02:46,955 --> 00:02:49,267"
+  },
   "visualReviewSeconds": [2, 20, 50, 60, 90, 120, 130, 165],
   "youtube": {
     "status": "pending-human-file-selection-and-publication",

@@ -1,0 +1,221 @@
+1
+00:00:00,000 --> 00:00:04,162
+This is CueMend: a browser agent
+repairs caption timing
+
+2
+00:00:04,162 --> 00:00:07,243
+while a human protects
+the performance.
+
+3
+00:00:07,243 --> 00:00:10,289
+Here is the result first—zero conflicts
+
+4
+00:00:10,289 --> 00:00:12,997
+and a verifiable,
+editable export.
+
+5
+00:00:13,647 --> 00:00:17,223
+We reset to a fictional
+thirty-two-second rehearsal
+
+6
+00:00:17,223 --> 00:00:21,402
+with ten captions and seven independent
+timing problems.
+
+7
+00:00:21,402 --> 00:00:26,436
+Automation can measure overlap,
+reading rate, and visual collisions.
+
+8
+00:00:26,436 --> 00:00:29,579
+It cannot decide whether
+an audience laugh,
+
+9
+00:00:29,579 --> 00:00:33,399
+lighting reveal, or actor's breath
+deserves silence.
+
+10
+00:00:33,399 --> 00:00:36,718
+Those decisions stay
+in the human interface.
+
+11
+00:00:37,368 --> 00:00:40,437
+Through Chrome's native Web M C P channel,
+
+12
+00:00:40,437 --> 00:00:45,265
+the agent inspects the live revision,
+audits the active track,
+
+13
+00:00:45,265 --> 00:00:47,860
+and calls CueMend's staging tool.
+
+14
+00:00:47,860 --> 00:00:51,084
+The browser deterministically
+evaluates all
+
+15
+00:00:51,084 --> 00:00:55,332
+six thousand five hundred sixty-one
+authored combinations,
+
+16
+00:00:55,332 --> 00:00:58,809
+then exposes three
+zero-conflict alternatives.
+
+17
+00:00:58,809 --> 00:01:02,063
+Staging never mutates
+the active captions.
+
+18
+00:01:02,713 --> 00:01:05,693
+The first live preview minimizes motion,
+
+19
+00:01:05,693 --> 00:01:08,924
+but it crosses Jon's
+optional final breath.
+
+20
+00:01:08,924 --> 00:01:13,463
+The stage manager protects that beat
+with one visible click.
+
+21
+00:01:13,463 --> 00:01:16,151
+The workspace moves to revision two,
+
+22
+00:01:16,151 --> 00:01:21,414
+the conflict count rises to eight,
+and the old proposal becomes stale.
+
+23
+00:01:22,064 --> 00:01:25,554
+When the agent retries
+its revision-one request,
+
+24
+00:01:25,554 --> 00:01:29,443
+CueMend returns stale revision
+and changes nothing.
+
+25
+00:01:29,443 --> 00:01:33,988
+The capability inventory also retires
+unsafe proposal tools.
+
+26
+00:01:33,988 --> 00:01:36,969
+The agent must inspect the current state
+
+27
+00:01:36,969 --> 00:01:40,200
+and replan under
+the new human constraint.
+
+28
+00:01:40,850 --> 00:01:45,371
+The new search finds
+two hundred fifty-six legal tracks.
+
+29
+00:01:45,371 --> 00:01:47,650
+The agent previews plan one,
+
+30
+00:01:47,650 --> 00:01:51,381
+but only the human can select
+and approve it.
+
+31
+00:01:51,381 --> 00:01:55,391
+Approval binds the exact proposal,
+plan, revision,
+
+32
+00:01:55,391 --> 00:01:57,940
+and S H A two fifty-six digest.
+
+33
+00:01:57,940 --> 00:02:01,751
+Only then does the one-shot
+commit tool appear.
+
+34
+00:02:02,401 --> 00:02:06,204
+The agent invokes that temporary
+commit capability
+
+35
+00:02:06,204 --> 00:02:08,174
+with an idempotency key.
+
+36
+00:02:08,174 --> 00:02:11,753
+CueMend revalidates the approval
+and beat locks
+
+37
+00:02:11,753 --> 00:02:13,800
+before changing anything.
+
+38
+00:02:13,800 --> 00:02:18,943
+The shared page immediately shows
+revision three, zero conflicts,
+
+39
+00:02:18,943 --> 00:02:22,325
+a clean cue rail,
+and an immutable receipt.
+
+40
+00:02:22,325 --> 00:02:24,372
+Mutation tools disappear.
+
+41
+00:02:25,022 --> 00:02:29,314
+Finally, the agent independently
+re-audits the committed track
+
+42
+00:02:29,314 --> 00:02:33,772
+and exports editable Web V T T
+plus a limitations certificate.
+
+43
+00:02:33,772 --> 00:02:37,373
+The certificate proves
+this exact fictional fixture
+
+44
+00:02:37,373 --> 00:02:39,447
+under the named demo profile;
+
+45
+00:02:39,447 --> 00:02:43,286
+it does not claim universal
+accessibility compliance.
+
+46
+00:02:43,286 --> 00:02:46,955
+CueMend lets the agent do
+exhaustive mechanical work
+
+47
+00:02:46,955 --> 00:02:49,267
+while the human keeps the beat.

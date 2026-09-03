@@ -20,7 +20,7 @@ or pending row is deliberately not a pass.
 | Native WebMCP | Real stale attempt is rejected and safely recovered | Passed 2026-09-04 06:04 +08:00 | Old revision 1 stage returned `STALE_REVISION` in each live run; state stayed r2/stale/8 |
 | Repeatability | Three clean-reset live runs succeed | Passed 2026-09-04 06:04 +08:00 | 3/3 runs: baseline r1/7 → stale r2/8 → committed r3/0 |
 | Deployment | Anonymous HTTPS load matches the public repository | Passed 2026-09-04 07:24 +08:00 | Pages build `24f0c72121884ed2f5a50a9bc178ae6a0592094f`; Actions run `33817344705`; cache-busted index/favicon 200; browser diagnostics 0/0/0 |
-| Video master | Result-first cut, real native-browser evidence, audible narration, captions and duration under three minutes | Passed 2026-09-04 07:16 +08:00 | Actions run `33816454390`; 169.916 s; 1280×720 H.264/AAC; SHA-256 `96ba8a62…300f2`; `demo-video-evidence.json` |
+| Video master | Result-first cut, real native-browser evidence, audible narration, readable captions and duration under three minutes | Passed 2026-09-04 07:16 +08:00 | Actions run `33816454390`; 169.916 s; 1280×720 H.264/AAC; SHA-256 `96ba8a62…300f2`; 47-cue YouTube SRT; `demo-video-evidence.json` |
 | Video delivery | Public YouTube URL opens without authentication and remains under three minutes after transcode | Blocked on human file selection/publication | Local master: `artifacts/demo-cloud/cuemend-webmcp-demo.mp4` |
 | Devpost | Required fields complete and status says `Submitted` | Blocked on user confirmation | Devpost URL/status |
 

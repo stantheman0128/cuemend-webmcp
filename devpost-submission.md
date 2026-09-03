@@ -138,6 +138,8 @@ accessibility or replace professional caption review.
 - Public source: https://github.com/stantheman0128/cuemend-webmcp
 - Public YouTube demo: `PENDING_VIDEO`
 - Video duration: 2:49.916 local master; final YouTube duration still requires verification
+- YouTube publish package: `docs/youtube-publish-package.md`
+- Phrase-level English captions: `docs/verification/cuemend-youtube-captions.srt`
 - Tested clients: Chrome 151.0.7922.175 with the native CDP `WebMCP` domain; ordinary UI fallback in the same browser with WebMCP disabled
 - Devpost draft: https://devpost.com/software/cuemend (submission `1169845`, not yet Submitted)
 
