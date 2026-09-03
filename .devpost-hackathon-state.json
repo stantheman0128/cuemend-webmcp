@@ -13,10 +13,14 @@
     "display_name": ""
   },
   "project": {
-    "name": "",
-    "summary": "",
-    "ai_usage": "",
-    "codex_usage": ""
+    "id": 1416114,
+    "slug": "cuemend",
+    "name": "CueMend",
+    "summary": "A WebMCP rehearsal room where humans protect dramatic beats and agents exhaustively repair caption timing.",
+    "ai_usage": "OpenAI Codex supported research, ideation, adversarial selection, implementation, testing, verification, and documentation.",
+    "codex_usage": "Codex coordinated the evidence-backed build while the shipped application remains deterministic and browser-local.",
+    "live_url": "https://stantheman0128.github.io/cuemend-webmcp/",
+    "source_url": "https://github.com/stantheman0128/cuemend-webmcp"
   },
   "current_stage": "review-hackathon-rules",
   "completed_stages": [
@@ -32,7 +36,9 @@
   },
   "submission": {
     "draft_file": "devpost-submission.md",
-    "status": "not-started"
+    "id": 1169845,
+    "url": "https://devpost.com/software/cuemend",
+    "status": "draft"
   },
   "next_command": "review-hackathon-rules"
 }

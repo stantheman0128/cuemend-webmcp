@@ -1,8 +1,8 @@
 # CueMend — Devpost Submission Draft
 
-Status: copy-ready draft. URLs, tested-client evidence and video duration remain
-placeholders until they are verified. This file is not evidence that an entry
-has been submitted.
+Status: Devpost project `1416114` / submission `1169845` exists as a draft.
+The live URL, source URL and tested-client evidence are verified; the public
+video is still pending. This file is not evidence that the entry is Submitted.
 
 ## Project name
 
@@ -132,13 +132,14 @@ Theatre Profile is a transparent product fixture, not a universal WCAG,
 broadcast, venue, legal or artistic standard. CueMend does not claim to certify
 accessibility or replace professional caption review.
 
-## Links — fill only after verification
+## Links
 
 - Live app: https://stantheman0128.github.io/cuemend-webmcp/
 - Public source: https://github.com/stantheman0128/cuemend-webmcp
 - Public YouTube demo: `PENDING_VIDEO`
 - Video duration: `PENDING_DURATION`
 - Tested clients: Chrome 151.0.7922.175 with the native CDP `WebMCP` domain; ordinary UI fallback in the same browser with WebMCP disabled
+- Devpost draft: https://devpost.com/software/cuemend (submission `1169845`, not yet Submitted)
 
 ## Testing instructions
 
