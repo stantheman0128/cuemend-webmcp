@@ -12,9 +12,9 @@ or pending row is deliberately not a pass.
 | Commit | Stable request ID is idempotent and receipt-bound | Passed 2026-09-04 05:22 +08:00 | `tests/commands.test.js` |
 | WebMCP | Tool inventories change across all four phases | Passed 2026-09-04 05:22 +08:00 | `node --test tests/webmcp.test.js` — 6/6 |
 | Static app | Full automated suite passes | Passed 2026-09-04 06:02 +08:00 | `npm test` — 18/18, 0 failed, 675.813 ms |
-| Static server | Homepage/module/favicon delivery, CSP, methods, encoded Windows traversal and 404 behavior | Passed 2026-09-04 06:02 +08:00 | `tests/server.test.js` — 1/1 |
+| Static server | Homepage/module/favicon delivery, CSP, methods, encoded slash/backslash traversal and 404 behavior | Passed 2026-09-04 07:21 +08:00 | `tests/server.test.js` — 1/1 on Windows and Linux CI |
 | Source hygiene | No placeholder, stale name or hidden network-capable API in app/test/server scope | Passed 2026-09-04 05:23 +08:00 | Focused `rg` checks; only documented links, data-SVG and local server URLs remain |
-| Clean clone | Public repository clone is clean and independently passes the full suite | Passed 2026-09-04 05:28 +08:00 | Remote HEAD `1965fe13c12bbca928edb26b459b7259bb18802c`; 18/18, 0 failed |
+| Clean clone | Public repository checkout independently passes the full suite | Passed 2026-09-04 07:21 +08:00 | GitHub Actions run `33817249399` on `8cb60adb12513470ab5f41b7e26dc30d05f325cb`; Ubuntu clean checkout; 18/18, 0 failed, 1,380.863 ms |
 | Ordinary UI | Clean reset journey, transport, keyboard, reduced motion and split-width layout work in a standard browser | Passed 2026-09-04 06:04 +08:00 | Chrome 151; `ordinary-browser-verification.json`; baseline/final/split screenshots |
 | Native WebMCP | Real browser agent completes the critical multi-tool journey | Passed 2026-09-04 06:04 +08:00 | Chrome 151 CDP `WebMCP`; `webmcp-browser-verification.json`; 10 native calls per run |
 | Native WebMCP | Real stale attempt is rejected and safely recovered | Passed 2026-09-04 06:04 +08:00 | Old revision 1 stage returned `STALE_REVISION` in each live run; state stayed r2/stale/8 |
