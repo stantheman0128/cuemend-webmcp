@@ -8,6 +8,8 @@ timing through WebMCP. The result stays visible, editable and verifiable.
 
 Built for [The WebMCP Challenge](https://webmcp.devpost.com/).
 
+**[Open the live CueMend rehearsal](https://stantheman0128.github.io/cuemend-webmcp/)**
+
 ## Why this needs both a person and an agent
 
 A solver can check thousands of timing combinations; it cannot decide whether

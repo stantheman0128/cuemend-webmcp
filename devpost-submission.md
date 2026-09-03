@@ -134,8 +134,8 @@ accessibility or replace professional caption review.
 
 ## Links — fill only after verification
 
-- Live app: `PENDING_DEPLOYMENT`
-- Public source: `PENDING_REPOSITORY`
+- Live app: https://stantheman0128.github.io/cuemend-webmcp/
+- Public source: https://github.com/stantheman0128/cuemend-webmcp
 - Public YouTube demo: `PENDING_VIDEO`
 - Video duration: `PENDING_DURATION`
 - Tested clients: `PENDING_NATIVE_WEBMCP_EVIDENCE`
