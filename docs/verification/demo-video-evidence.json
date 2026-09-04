@@ -32,13 +32,25 @@
   },
   "youtubeCaptions": {
     "file": "docs/verification/cuemend-youtube-captions.srt",
-    "sha256": "96b61dd15b66966dadfee88f9680bc2e4fd3a0b5b34d702203069ea1524d2982",
-    "blocks": 47,
+    "sha256": "cfdcd99cdd399c23d4926e8b9faf3eb0d6d625588c7645ecf0fc55be1371d751",
+    "sha256Normalization": "LF line endings",
+    "blocks": 43,
     "completeNarration": true,
+    "displayNormalizations": ["WebMCP", "SHA-256", "WebVTT", "32-second"],
     "maximumLinesPerBlock": 2,
     "maximumLineCharacters": 42,
-    "maximumCharactersPerSecond": 14.4,
-    "lastTimestamp": "00:02:46,955 --> 00:02:49,267"
+    "maximumCharactersPerSecond": 16.9,
+    "firstTimestamp": "00:00:00,109 --> 00:00:03,999",
+    "lastTimestamp": "00:02:46,722 --> 00:02:49,267",
+    "alignment": {
+      "method": "Microsoft SAPI SpeakProgress word positions from matching narration text and voice",
+      "provenance": "One local alignment run; structural and content properties are independently checked by tests/captions.test.js",
+      "matchingVoice": "Microsoft Zira Desktop",
+      "sceneDurationsMatchedAtThreeDecimals": 8,
+      "mappedCueStarts": 43,
+      "fallbackCueStarts": 0,
+      "overlaps": 0
+    }
   },
   "visualReviewSeconds": [2, 20, 50, 60, 90, 120, 130, 165],
   "youtube": {

@@ -27,6 +27,14 @@ clear screen; an actor's breath can be part of the story. We built CueMend to
 show a form of human-agent collaboration where the human contributes genuine
 authority and taste while the agent performs exhaustive, inspectable work.
 
+Small theatres, school productions and live-event teams are the audience we
+designed for: people who need systematic caption checks but cannot delegate a
+performance's meaning to an optimizer. CueMend gives the agent exhaustive
+comparison work while the stage manager retains artistic judgment and the
+final commit decision. Unlike a chat wrapper or one-shot fixer, the human's
+taste becomes revisioned page state that invalidates old agent work and changes
+which WebMCP actions exist.
+
 ## What it does
 
 CueMend opens a fictional 32-second rehearsal with ten caption cues and seven
@@ -56,16 +64,24 @@ state shown in its stage, cue rail, issue cards and activity log:
 - commit only a plan approved in the human UI;
 - verify and export only after commit.
 
-Tool availability follows the state machine. Proposal tools appear only while
-a fresh proposal exists; the one-shot commit capability appears only after
-human approval; mutation tools retire after commit. Registrations are removed
-with an `AbortSignal`. Every handler repeats runtime validation because schemas
-and annotations are not treated as security boundaries.
+Tool availability follows the state machine. A fresh proposal exposes preview
+and discard tools. When that proposal becomes stale, preview retires while safe
+discard and replan actions remain. The one-shot commit capability appears only
+after human approval, and mutation tools retire after commit. Registrations are
+removed with an `AbortSignal`. Every handler repeats runtime validation because
+schemas and annotations are not treated as security boundaries.
 
 Without WebMCP, an agent sees pixels or receives an opaque caption file. With
 WebMCP, CueMend can expose cue IDs, current locks, revision-bound alternatives,
 structured evidence and safe next actions while the human sees every state
 transition in the ordinary product UI.
+
+**Native execution proof.** We exercised this exact journey three times from a
+clean reset in Chrome 151 through the browser's native CDP `WebMCP` domain, with
+10 native tool calls per run. Every run produced a genuine `STALE_REVISION`
+refusal, recovered safely, and finished at revision 3 with zero conflicts.
+Machine-readable traces and screenshots are archived in `docs/verification/`;
+a separate ordinary-UI run reached the same product result.
 
 ## How we built it
 
@@ -98,7 +114,8 @@ consequential state immediately before commit.
 
 - A human decision causes a real agent replan, not a cosmetic approval step.
 - The engine evaluates every candidate in its disclosed finite search space.
-- An old proposal cannot survive a human lock or revision change.
+- An old proposal cannot be previewed, approved or committed after a human lock
+  or revision change.
 - Commit is bound to the selected plan, current locks, profile and revision.
 - One request ID applies at most once and returns the same receipt on replay.
 - The final artifact is editable WebVTT, not a result trapped in chat.
@@ -151,6 +168,12 @@ ChatGPT in-app browser or supported Chrome build. Confirm the header says
 browser agent. The button adapts its instruction to the current phase. The
 entire ordinary UI also works without WebMCP.
 
+For an ordinary-browser fallback, verify these visible checkpoints in order:
+**r1 / 7 conflicts** → **Protect Jon's breath** → **r2 / 8 conflicts + Stale**
+→ **Replan revision 2** → select plan 1 → **Approve exact selected plan** →
+**Apply approved plan (UI)** → **r3 / 0 conflicts** → **Verify & build evidence
+pack**.
+
 ## Technology and AI disclosures
 
 - WebMCP imperative API
@@ -168,6 +191,8 @@ entire ordinary UI also works without WebMCP.
 - App status / pre-existing work: new project created during the challenge
 - Repository license: MIT
 - Authentication credentials: none
-- Teammates: none unless the user adds one
+- Team / invitation status: `PENDING_USER_CONFIRMATION`; before submission,
+  verify that the selected Submitter Type matches Devpost and that every listed
+  teammate, if any, has accepted the invitation
 - Formal rules acknowledgement: required from the user before submission
 - Final `Submitted` state: must be checked live before the deadline
